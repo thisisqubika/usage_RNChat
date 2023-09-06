@@ -1,10 +1,10 @@
-import {createSelector, createSlice} from '@reduxjs/toolkit';
-import type {PayloadAction} from '@reduxjs/toolkit';
-import {RootState} from '../../services/store/store';
+import { RootState } from '@/services/store/store';
+import { createSelector, createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
 interface Login {
   email: string | null;
-  phoneNumber: string | null;
+  isLogged: boolean | null;
 }
 
 interface LoginState {
@@ -14,7 +14,7 @@ interface LoginState {
 const initialState: LoginState = {
   login: {
     email: null,
-    phoneNumber: null,
+    isLogged: null,
   },
 };
 
@@ -28,8 +28,8 @@ export const loginSlice = createSlice({
     updateLoginEmail(state, action: PayloadAction<string>) {
       state.login.email = action.payload;
     },
-    updateLoginPhoneNumber(state, action: PayloadAction<string>) {
-      state.login.phoneNumber = action.payload;
+    setLoggedUser(state) {
+      state.login.isLogged = true;
     },
   },
 });
@@ -39,5 +39,5 @@ export const selectLogin = createSelector(
   state => state.login ?? '',
 );
 
-export const {clearLogin, updateLoginEmail, updateLoginPhoneNumber} =
+export const { clearLogin, updateLoginEmail, setLoggedUser } =
   loginSlice.actions;

@@ -1,7 +1,14 @@
-import {combineReducers, configureStore} from '@reduxjs/toolkit';
-import type {PreloadedState} from '@reduxjs/toolkit';
-import {FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE} from 'redux-persist';
-import {loginSlice} from '../../features/login/slice';
+import { loginSlice } from '@/features/Login/slice';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import type { PreloadedState } from '@reduxjs/toolkit';
+import {
+  FLUSH,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+  REHYDRATE,
+} from 'redux-persist';
 
 const rootReducer = combineReducers({
   login: loginSlice.reducer,

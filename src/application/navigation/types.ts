@@ -1,12 +1,14 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
   Dashboard: undefined;
+  Login: undefined;
 };
 
 export type DashboardScreenProps = NativeStackScreenProps<
   RootStackParamList,
-  'Dashboard'
+  'Dashboard',
+  'Login'
 >;
 
 declare global {

@@ -1,14 +1,14 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Dashboard from './screens/Dashboard/Dashboard';
 import { RootStackParamList } from './types';
+import { Login } from './screens/Login/Login';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-export const AppStack = () => {
+export const AuthStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Dashboard" component={Dashboard} />
+      <Stack.Screen name="Login" component={Login} />
     </Stack.Navigator>
   );
 };
