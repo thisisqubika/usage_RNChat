@@ -1,8 +1,9 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { styles } from './Login.styles';
 import { useDispatch } from 'react-redux';
-import { setLoggedUser } from '@/features/Login/slice';
+import { setLoggedUser } from '../../../../features/Login/slice';
+import { Button } from '../../../../ui';
 
 export function Login(): JSX.Element {
   const dispatch = useDispatch();
@@ -13,8 +14,10 @@ export function Login(): JSX.Element {
 
   return (
     <View style={styles.container}>
-      <Text>{'Welcome'}</Text>
-      <Button title="Login" onPress={handleLogin} />
+      <View style={styles.content}>
+        <Text>{'Welcome'}</Text>
+      </View>
+      <Button title="Login" onPress={handleLogin} testID="LoginButton" />
     </View>
   );
 }

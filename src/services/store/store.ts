@@ -1,4 +1,3 @@
-import { loginSlice } from '@/features/Login/slice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import type { PreloadedState } from '@reduxjs/toolkit';
 import {
@@ -9,6 +8,7 @@ import {
   REGISTER,
   REHYDRATE,
 } from 'redux-persist';
+import { loginSlice } from '../../features/Login/slice';
 
 const rootReducer = combineReducers({
   login: loginSlice.reducer,

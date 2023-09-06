@@ -1,6 +1,6 @@
-import { RootState } from '@/services/store/store';
 import { createSelector, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from '../../services/store/store';
 
 interface Login {
   email: string | null;
