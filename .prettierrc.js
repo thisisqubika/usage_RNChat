@@ -3,5 +3,6 @@ module.exports = {
   bracketSameLine: true,
   bracketSpacing: true,
   singleQuote: true,
+  useTabs: true,
   trailingComma: 'all',
 };
