@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Config } from 'react-native-config';
 import { useDispatch } from 'react-redux';
 
-import { login } from 'features/session/slice';
+import { HomeScreenProps } from 'application/navigation/types';
+import { logout } from 'features/session/slice';
 import { Button } from 'ui';
 
 const styles = StyleSheet.create({
@@ -17,19 +19,21 @@ const styles = StyleSheet.create({
 	},
 });
 
-export function Login(): JSX.Element {
+const Home: React.FC<HomeScreenProps> = () => {
 	const dispatch = useDispatch();
 
-	const handleLogin = () => {
-		dispatch(login({ email: 'user@example.com' }));
+	const handleLogout = () => {
+		dispatch(logout());
 	};
 
 	return (
 		<View style={styles.container}>
 			<View style={styles.content}>
-				<Text>{'Welcome'}</Text>
+				<Text>{'Hello world! Build Variant: ' + Config.BUILD_VARIANT}</Text>
 			</View>
-			<Button title="Login" onPress={handleLogin} testID="LoginButton" />
+			<Button title="Logout" onPress={handleLogout} testID="LogoutButton" />
 		</View>
 	);
-}
+};
+
+export default Home;
