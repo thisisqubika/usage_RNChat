@@ -3,7 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 
 import { RootState } from 'services/store/store';
 
-interface User {
+export interface User {
 	email: string | null;
 }
 
