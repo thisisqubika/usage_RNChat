@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
-
+import { useTheme } from '@react-navigation/native';
 interface ButtonProps {
 	title: string;
 	onPress: () => void;
@@ -9,8 +9,8 @@ interface ButtonProps {
 
 const styles = StyleSheet.create({
 	container: {
+		borderRadius: 8,
 		paddingVertical: 10,
-		backgroundColor: 'black',
 	},
 	text: {
 		color: 'white',
@@ -21,9 +21,11 @@ const styles = StyleSheet.create({
 });
 
 export const Button: React.FC<ButtonProps> = ({ title, onPress, testID }) => {
+	const { colors } = useTheme();
+
 	return (
 		<TouchableOpacity
-			style={styles.container}
+			style={[styles.container, { backgroundColor: colors.primary }]}
 			onPress={onPress}
 			testID={testID}>
 			<Text style={styles.text}>{title}</Text>
