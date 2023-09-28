@@ -1,6 +1,8 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import type { PreloadedState } from '@reduxjs/toolkit';
 import {
+	persistReducer,
 	FLUSH,
 	PAUSE,
 	PERSIST,
@@ -11,13 +13,20 @@ import {
 
 import { sessionSlice } from 'features/session/slice';
 
+const persistConfig = {
+	key: 'root',
+	storage: AsyncStorage,
+};
+
 const rootReducer = combineReducers({
 	session: sessionSlice.reducer,
 });
 
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
 export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
 	return configureStore({
-		reducer: rootReducer,
+		reducer: persistedReducer,
 		// Specify application middlewares, i.e. Logging, Additional API services
 		middleware: getDefaultMiddleware => {
 			const middleware = getDefaultMiddleware({
