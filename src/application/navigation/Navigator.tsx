@@ -1,11 +1,18 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {AppStack} from './AppStack';
+import { useSelector } from 'react-redux';
+import { NavigationContainer } from '@react-navigation/native';
+
+import { selectUser } from 'features/session/slice';
+
+import { AppStack } from './AppStack';
+import { AuthStack } from './AuthStack';
 
 export const Navigator: React.FC = () => {
-  return (
-    <NavigationContainer>
-      <AppStack />
-    </NavigationContainer>
-  );
+	const user = useSelector(selectUser);
+
+	return (
+		<NavigationContainer>
+			{user ? <AppStack /> : <AuthStack />}
+		</NavigationContainer>
+	);
 };

@@ -1,14 +1,15 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Dashboard from './screens/Dashboard';
-import {RootStackParamList} from './types';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+import Home from './screens/Home/Home';
+import { AppStackParamList } from './types';
+
+const Stack = createNativeStackNavigator<AppStackParamList>();
 
 export const AppStack = () => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Dashboard" component={Dashboard} />
-    </Stack.Navigator>
-  );
+	return (
+		<Stack.Navigator>
+			<Stack.Screen name="Home" component={Home} />
+		</Stack.Navigator>
+	);
 };
