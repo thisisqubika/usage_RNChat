@@ -4,6 +4,7 @@ import { Config } from 'react-native-config';
 import { useDispatch } from 'react-redux';
 
 import { HomeScreenProps } from 'application/navigation/types';
+import ReanimatedComponent from 'features/examples/reanimated';
 import { logout } from 'features/session/slice';
 import { Button } from 'ui';
 
@@ -17,6 +18,9 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
+	title: {
+		marginBottom: 40,
+	},
 });
 
 const Home: React.FC<HomeScreenProps> = () => {
@@ -29,7 +33,10 @@ const Home: React.FC<HomeScreenProps> = () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.content}>
-				<Text>{'Hello world! Build Variant: ' + Config.BUILD_VARIANT}</Text>
+				<Text style={styles.title}>
+					{'Hello world! Build Variant: ' + Config.BUILD_VARIANT}
+				</Text>
+				<ReanimatedComponent />
 			</View>
 			<Button title="Logout" onPress={handleLogout} testID="LogoutButton" />
 		</View>
