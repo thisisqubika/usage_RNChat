@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
+import { useTheme } from '@react-navigation/native';
 
 const styles = StyleSheet.create({
 	container: {
 		height: 100,
-		backgroundColor: 'black',
 		borderRadius: 10,
 	},
 	flex: {
@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
 
 const ReanimatedComponent = () => {
 	const width = useSharedValue(100);
+	const { colors } = useTheme();
 
 	const handlePress = () => {
 		width.value = withSpring(width.value + 50);
@@ -26,7 +27,11 @@ const ReanimatedComponent = () => {
 
 	return (
 		<>
-			<Animated.View style={[styles.container, { width }]}>
+			<Animated.View
+				style={[
+					styles.container,
+					{ width, backgroundColor: colors.secondary },
+				]}>
 				<TouchableOpacity
 					style={styles.flex}
 					onPress={handlePress}

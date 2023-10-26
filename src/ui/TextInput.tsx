@@ -4,6 +4,7 @@ import {
 	TextInput as RNTextInput,
 	TextInputProps,
 } from 'react-native';
+import { useTheme } from '@react-navigation/native';
 
 const styles = StyleSheet.create({
 	input: {
@@ -12,6 +13,12 @@ const styles = StyleSheet.create({
 	},
 });
 
-export const TextInput: React.FC<TextInputProps> = ({ style, ...props }) => (
-	<RNTextInput style={[styles.input, style]} {...props} />
-);
+export const TextInput: React.FC<TextInputProps> = ({ style, ...props }) => {
+	const { colors } = useTheme();
+	return (
+		<RNTextInput
+			style={[styles.input, { color: colors.text }, style]}
+			{...props}
+		/>
+	);
+};

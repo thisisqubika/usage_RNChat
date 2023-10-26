@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useDispatch } from 'react-redux';
+import { useTheme } from '@react-navigation/native';
 
 import { LoginScreenProps } from 'application/navigation/types';
 import { login } from 'features/session/slice';
@@ -35,6 +36,7 @@ const Login: React.FC<LoginScreenProps> = () => {
 	const [password, setPassword] = useState<string>('');
 	const [error, setError] = useState<string>();
 	const dispatch = useDispatch();
+	const { colors } = useTheme();
 
 	const handleLogin = async () => {
 		try {
@@ -51,7 +53,7 @@ const Login: React.FC<LoginScreenProps> = () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.content}>
-				<Text style={styles.title}>{'Welcome'}</Text>
+				<Text style={[styles.title, { color: colors.text }]}>{'Welcome'}</Text>
 				<TextInput
 					placeholder="email"
 					onChangeText={setEmail}
