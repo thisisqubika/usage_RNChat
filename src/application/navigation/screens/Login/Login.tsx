@@ -7,6 +7,7 @@ import { LoginScreenProps } from 'application/navigation/types';
 import { login } from 'features/session/slice';
 import SessionService from 'services/api/session';
 import { Button, TextInput } from 'ui';
+import { strings } from 'localization';
 
 const styles = StyleSheet.create({
 	container: {
@@ -53,15 +54,17 @@ const Login: React.FC<LoginScreenProps> = () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.content}>
-				<Text style={[styles.title, { color: colors.text }]}>{'Welcome'}</Text>
+				<Text style={[styles.title, { color: colors.text }]}>
+					{strings.login.header}
+				</Text>
 				<TextInput
-					placeholder="email"
+					placeholder={strings.login.email}
 					onChangeText={setEmail}
 					style={styles.input}
 					testID="email-input"
 				/>
 				<TextInput
-					placeholder="password"
+					placeholder={strings.login.password}
 					onChangeText={setPassword}
 					style={styles.input}
 					testID="password-input"
@@ -69,7 +72,11 @@ const Login: React.FC<LoginScreenProps> = () => {
 				/>
 				{!!error && <Text style={styles.error}>{error}</Text>}
 			</View>
-			<Button title="Login" onPress={handleLogin} testID="LoginButton" />
+			<Button
+				title={strings.login.button}
+				onPress={handleLogin}
+				testID="LoginButton"
+			/>
 		</View>
 	);
 };
