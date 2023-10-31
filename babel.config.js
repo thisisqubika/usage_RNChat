@@ -23,6 +23,7 @@ module.exports = {
 					types: './src/types',
 					ui: './src/ui',
 					localization: './src/localization',
+					utils: './src/utils',
 				},
 			},
 		],

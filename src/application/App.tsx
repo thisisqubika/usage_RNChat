@@ -7,6 +7,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { setupStore } from 'services/store/store';
 
 import { Navigator } from './navigation';
+import { setPreferredLanguage } from 'localization';
 
 const store = setupStore();
 const persistor = persistStore(store);
@@ -14,9 +15,13 @@ const persistor = persistStore(store);
 function App(): JSX.Element {
 	const isDarkMode = useColorScheme() === 'dark';
 
+	const onBeforeLift = async () => {
+		await setPreferredLanguage();
+	};
+
 	return (
 		<Provider store={store}>
-			<PersistGate persistor={persistor}>
+			<PersistGate persistor={persistor} onBeforeLift={onBeforeLift}>
 				<>
 					<StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 					<Navigator />
