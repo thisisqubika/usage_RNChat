@@ -8,6 +8,7 @@ import { HomeScreenProps } from 'application/navigation/types';
 import ReanimatedComponent from 'features/examples/reanimated';
 import { logout } from 'features/session/slice';
 import { Button } from 'ui';
+import { strings } from 'services/localization';
 
 const styles = StyleSheet.create({
 	container: {
@@ -36,11 +37,15 @@ const Home: React.FC<HomeScreenProps> = () => {
 		<View style={styles.container}>
 			<View style={styles.content}>
 				<Text style={[styles.title, { color: colors.text }]}>
-					{'Hello world! Build Variant: ' + Config.BUILD_VARIANT}
+					{strings.home.message + Config.BUILD_VARIANT}
 				</Text>
 				<ReanimatedComponent />
 			</View>
-			<Button title="Logout" onPress={handleLogout} testID="LogoutButton" />
+			<Button
+				title={strings.home.button}
+				onPress={handleLogout}
+				testID="LogoutButton"
+			/>
 		</View>
 	);
 };

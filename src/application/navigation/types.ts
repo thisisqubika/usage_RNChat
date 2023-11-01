@@ -11,11 +11,11 @@ export type AuthStackParamList = {
 type AppStackNavigatorScreenProps<T extends keyof AppStackParamList> =
 	NativeStackScreenProps<AppStackParamList, T>;
 
-type AuthkNavigatorScreenProps<T extends keyof AuthStackParamList> =
+type AuthNavigatorScreenProps<T extends keyof AuthStackParamList> =
 	NativeStackScreenProps<AuthStackParamList, T>;
 
 export type HomeScreenProps = AppStackNavigatorScreenProps<'Home'>;
-export type LoginScreenProps = AuthkNavigatorScreenProps<'Login'>;
+export type LoginScreenProps = AuthNavigatorScreenProps<'Login'>;
 
 type AppParamList = AppStackParamList & AuthStackParamList;
 
