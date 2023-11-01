@@ -8,7 +8,7 @@ import { HomeScreenProps } from 'application/navigation/types';
 import ReanimatedComponent from 'features/examples/reanimated';
 import { logout } from 'features/session/slice';
 import { Button } from 'ui';
-import { strings } from 'localization';
+import { strings } from 'services/localization';
 
 const styles = StyleSheet.create({
 	container: {

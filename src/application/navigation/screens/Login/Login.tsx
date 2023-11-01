@@ -7,7 +7,7 @@ import { LoginScreenProps } from 'application/navigation/types';
 import { login } from 'features/session/slice';
 import SessionService from 'services/api/session';
 import { Button, TextInput } from 'ui';
-import { strings } from 'localization';
+import { strings } from 'services/localization';
 
 const styles = StyleSheet.create({
 	container: {
