@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 });
 
 const Login: React.FC<LoginScreenProps> = () => {
-	const [email, setEmail] = useState<string>('');
+	const [username, setUsername] = useState<string>('');
 	const [password, setPassword] = useState<string>('');
 	const [error, setError] = useState<string>();
 	const dispatch = useDispatch();
@@ -40,17 +40,13 @@ const Login: React.FC<LoginScreenProps> = () => {
 
 	const handleLogin = async () => {
 		try {
-			const user = await SessionService.login({
-				email,
+			const user = await SessionService.logIn({
+				username,
 				password,
 			});
 			dispatch(login(user));
-		} catch (err: unknown) {
-			if (typeof err === 'string') {
-				setError(err);
-			} else {
-				setError('Unknown error');
-			}
+		} catch {
+			setError(strings.login.error);
 		}
 	};
 
@@ -61,10 +57,10 @@ const Login: React.FC<LoginScreenProps> = () => {
 					{strings.login.header}
 				</Text>
 				<TextInput
-					placeholder={strings.login.email}
-					onChangeText={setEmail}
+					placeholder={strings.login.username}
+					onChangeText={setUsername}
 					style={styles.input}
-					testID="email-input"
+					testID="username-input"
 				/>
 				<TextInput
 					placeholder={strings.login.password}

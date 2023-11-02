@@ -11,9 +11,10 @@ export const en = {
 	},
 	login: {
 		header: 'Welcome',
-		email: 'Email',
+		username: 'Username',
 		password: 'Password',
 		button: 'Login',
+		error: 'Something went wrong when logging in',
 	},
 	settings: {
 		switchTo: 'Switch to {0}',
