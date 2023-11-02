@@ -1,14 +1,14 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import type { PreloadedState } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import {
-	persistReducer,
 	FLUSH,
 	PAUSE,
 	PERSIST,
 	PURGE,
 	REGISTER,
 	REHYDRATE,
+	persistReducer,
 } from 'redux-persist';
 
 import { sessionSlice } from 'features/session/slice';
@@ -36,6 +36,7 @@ export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
 			});
 
 			if (__DEV__ && !process.env.JEST_WORKER_ID) {
+				// eslint-disable-next-line @typescript-eslint/no-var-requires
 				const createDebugger = require('redux-flipper').default;
 				middleware.push(createDebugger());
 			}

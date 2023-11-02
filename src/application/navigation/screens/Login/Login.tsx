@@ -1,13 +1,13 @@
+import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { useTheme } from '@react-navigation/native';
 
 import { LoginScreenProps } from 'application/navigation/types';
 import { login } from 'features/session/slice';
 import SessionService from 'services/api/session';
-import { Button, TextInput } from 'ui';
 import { strings } from 'services/localization';
+import { Button, TextInput } from 'ui';
 
 const styles = StyleSheet.create({
 	container: {
@@ -15,12 +15,11 @@ const styles = StyleSheet.create({
 		padding: 30,
 	},
 	content: {
+		alignItems: 'stretch',
 		flex: 1,
 		justifyContent: 'center',
-		alignItems: 'stretch',
 	},
 	error: {
-		color: 'red',
 		marginTop: 12,
 	},
 	input: {
@@ -46,8 +45,12 @@ const Login: React.FC<LoginScreenProps> = () => {
 				password,
 			});
 			dispatch(login(user));
-		} catch (err: any) {
-			setError(err);
+		} catch (err: unknown) {
+			if (typeof err === 'string') {
+				setError(err);
+			} else {
+				setError('Unknown error');
+			}
 		}
 	};
 
@@ -70,7 +73,9 @@ const Login: React.FC<LoginScreenProps> = () => {
 					testID="password-input"
 					secureTextEntry
 				/>
-				{!!error && <Text style={styles.error}>{error}</Text>}
+				{!!error && (
+					<Text style={[styles.error, { color: colors.error }]}>{error}</Text>
+				)}
 			</View>
 			<Button
 				title={strings.login.button}

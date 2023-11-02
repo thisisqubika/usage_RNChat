@@ -8,14 +8,14 @@ import {
 } from 'react-native';
 
 import { SettingsScreenProps } from 'application/navigation/types';
-import { Button } from 'ui';
 import {
-	setLanguage,
-	strings,
-	getCurrentLanguage,
 	english,
+	getCurrentLanguage,
+	setLanguage,
 	spanish,
+	strings,
 } from 'services/localization';
+import { Button } from 'ui';
 
 const styles = StyleSheet.create({
 	container: {

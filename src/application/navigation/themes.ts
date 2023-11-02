@@ -7,6 +7,8 @@ import {
 export type Theme = RNTheme & {
 	colors: {
 		secondary: string;
+		error: string;
+		border: string;
 	};
 };
 
@@ -18,6 +20,8 @@ export const DarkTheme: Theme = {
 		primary: '#183D3D',
 		secondary: '#5C8374',
 		text: '#FFFFFF',
+		error: '#FF0000',
+		border: '#808080',
 	},
 };
 
@@ -29,5 +33,7 @@ export const DefaultTheme: Theme = {
 		primary: '#5C8374',
 		secondary: '#183D3D',
 		text: '#000000',
+		error: '#FF0000',
+		border: '#808080',
 	},
 };

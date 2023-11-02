@@ -1,6 +1,6 @@
-import LocalizedStrings from 'react-native-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { setDefaultOptions as setDefaultDateOptions } from 'date-fns';
+import LocalizedStrings from 'react-native-localization';
 import {
 	LanguageOptions,
 	languages,

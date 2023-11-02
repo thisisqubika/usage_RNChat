@@ -1,28 +1,28 @@
+import { useTheme } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Config } from 'react-native-config';
 import { useDispatch } from 'react-redux';
-import { useTheme } from '@react-navigation/native';
 
 import { HomeScreenProps } from 'application/navigation/types';
+import DateShowCaseComponent from 'features/examples/dateShowcase';
 import ReanimatedComponent from 'features/examples/reanimated';
 import { logout } from 'features/session/slice';
-import { Button } from 'ui';
 import { strings } from 'services/localization';
-import DateShowCaseComponent from 'features/examples/dateShowcase';
+import { Button } from 'ui';
 
 const styles = StyleSheet.create({
-	divider: {
-		height: 30,
-	},
 	container: {
 		flex: 1,
 		padding: 30,
 	},
 	content: {
+		alignItems: 'center',
 		flex: 1,
 		justifyContent: 'center',
-		alignItems: 'center',
+	},
+	divider: {
+		height: 30,
 	},
 	title: {
 		marginBottom: 40,
