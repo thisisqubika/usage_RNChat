@@ -1,12 +1,12 @@
+import { useTheme } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
-import { useTheme } from '@react-navigation/native';
 
 const styles = StyleSheet.create({
 	container: {
-		height: 100,
 		borderRadius: 10,
+		height: 100,
 	},
 	flex: {
 		flex: 1,

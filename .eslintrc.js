@@ -1,13 +1,13 @@
 module.exports = {
 	parser: '@typescript-eslint/parser',
 	env: {
-		browser: true,
 		es2021: true,
 	},
 	extends: [
 		'@react-native',
 		'plugin:react/recommended',
 		'plugin:react-native/all',
+		'plugin:@typescript-eslint/recommended',
 	],
 	overrides: [
 		{

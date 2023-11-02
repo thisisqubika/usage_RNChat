@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, StyleSheet, useColorScheme } from 'react-native';
+import { StatusBar, useColorScheme } from 'react-native';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -30,9 +30,5 @@ function App(): JSX.Element {
 		</Provider>
 	);
 }
-
-const styles = StyleSheet.create({
-	newStyle: { color: 'red' },
-});
 
 export default App;

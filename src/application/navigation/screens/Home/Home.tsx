@@ -12,17 +12,17 @@ import { strings } from 'services/localization';
 import DateShowCaseComponent from 'features/examples/dateShowcase';
 
 const styles = StyleSheet.create({
-	divider: {
-		height: 30,
-	},
 	container: {
 		flex: 1,
 		padding: 30,
 	},
 	content: {
+		alignItems: 'center',
 		flex: 1,
 		justifyContent: 'center',
-		alignItems: 'center',
+	},
+	divider: {
+		height: 30,
 	},
 	title: {
 		marginBottom: 40,

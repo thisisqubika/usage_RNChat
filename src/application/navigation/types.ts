@@ -22,6 +22,7 @@ export type SettingsScreenProps = AppStackNavigatorScreenProps<'Settings'>;
 type AppParamList = AppStackParamList & AuthStackParamList;
 
 declare global {
+	// eslint-disable-next-line @typescript-eslint/no-namespace
 	namespace ReactNavigation {
 		interface RootParamList extends AppParamList {}
 	}
