@@ -1,13 +1,13 @@
 import React from 'react';
-import { StatusBar, useColorScheme } from 'react-native';
+import { StatusBar, StyleSheet, useColorScheme } from 'react-native';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import { setupStore } from 'services/store/store';
 
-import { Navigator } from './navigation';
 import { setPreferredLanguage } from 'services/localization';
+import { Navigator } from './navigation';
 
 const store = setupStore();
 const persistor = persistStore(store);
@@ -30,5 +30,9 @@ function App(): JSX.Element {
 		</Provider>
 	);
 }
+
+const styles = StyleSheet.create({
+	newStyle: { color: 'red' },
+});
 
 export default App;
