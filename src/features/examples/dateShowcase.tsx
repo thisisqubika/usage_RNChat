@@ -1,3 +1,4 @@
+import { useTheme } from '@react-navigation/native';
 import React from 'react';
 import { Text } from 'react-native';
 import {
@@ -5,8 +6,7 @@ import {
 	formatFullDate,
 	formatShortDate,
 	formatYearAndMonth,
-} from 'utils/dates';
-import { useTheme } from '@react-navigation/native';
+} from 'services/dates/format';
 
 const DateShowCaseComponent = () => {
 	const date = new Date();

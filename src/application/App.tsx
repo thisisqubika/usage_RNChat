@@ -6,7 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { setupStore } from 'services/store/store';
 
-import { setPreferredLanguage } from 'services/localization';
+import { loadAppLanguage } from 'services/localization';
 import { Navigator } from './navigation';
 
 const store = setupStore();
@@ -16,7 +16,7 @@ function App(): JSX.Element {
 	const isDarkMode = useColorScheme() === 'dark';
 
 	const onBeforeLift = async () => {
-		await setPreferredLanguage();
+		await loadAppLanguage();
 	};
 
 	return (

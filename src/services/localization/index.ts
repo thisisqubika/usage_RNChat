@@ -1,3 +1,7 @@
-export { strings, setLanguage } from './localization';
-export { setPreferredLanguage } from './localization';
-export { default as useGetCurrentLanguage } from './hooks/useGetCurrentLanguage';
+export { english, spanish } from './languages';
+export {
+	getCurrentLanguage,
+	loadAppLanguage,
+	setLanguage,
+	strings,
+} from './localization';

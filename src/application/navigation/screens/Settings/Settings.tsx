@@ -8,12 +8,14 @@ import {
 } from 'react-native';
 
 import { SettingsScreenProps } from 'application/navigation/types';
-import { Button } from 'ui';
 import {
+	english,
+	getCurrentLanguage,
 	setLanguage,
+	spanish,
 	strings,
-	useGetCurrentLanguage,
 } from 'services/localization';
+import { Button } from 'ui';
 
 const styles = StyleSheet.create({
 	container: {
@@ -22,8 +24,8 @@ const styles = StyleSheet.create({
 });
 
 const Settings: React.FC<SettingsScreenProps> = () => {
-	const currentLanguage = useGetCurrentLanguage();
-	const newLanguageOption = currentLanguage === 'en' ? 'es' : 'en';
+	const currentLanguage = getCurrentLanguage();
+	const newLanguageOption = currentLanguage === english ? spanish : english;
 
 	const setLanguageWithAlert = async () => {
 		const restartButton: AlertButton = {
