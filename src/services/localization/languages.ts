@@ -1,5 +1,5 @@
-import { en } from 'localization/en';
-import { es } from 'localization/es';
+import { en } from './en';
+import { es } from './es';
 import { enUS as enUsLocale, es as esLocale } from 'date-fns/locale';
 
 export const languages = { en, es };

@@ -7,7 +7,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { setupStore } from 'services/store/store';
 
 import { Navigator } from './navigation';
-import { setPreferredLanguage } from 'localization';
+import { setPreferredLanguage } from 'services/localization';
 
 const store = setupStore();
 const persistor = persistStore(store);

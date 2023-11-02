@@ -9,8 +9,11 @@ import {
 
 import { SettingsScreenProps } from 'application/navigation/types';
 import { Button } from 'ui';
-import { setLanguage, strings } from 'localization/localization';
-import { useGetCurrentLanguage } from 'localization';
+import {
+	setLanguage,
+	strings,
+	useGetCurrentLanguage,
+} from 'services/localization';
 
 const styles = StyleSheet.create({
 	container: {

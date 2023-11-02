@@ -1,7 +1,11 @@
 import LocalizedStrings from 'react-native-localization';
-import { LanguageOptions, languages, languagesLocales } from './languages';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { setDefaultOptions } from 'date-fns';
+import {
+	LanguageOptions,
+	languages,
+	languagesLocales,
+} from 'services/localization/languages';
 
 const LANGUAGE_KEY = 'language';
 
