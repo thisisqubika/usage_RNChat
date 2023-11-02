@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Config } from 'react-native-config';
 import { useDispatch } from 'react-redux';
 import { useTheme } from '@react-navigation/native';
@@ -9,8 +9,12 @@ import ReanimatedComponent from 'features/examples/reanimated';
 import { logout } from 'features/session/slice';
 import { Button } from 'ui';
 import { strings } from 'services/localization';
+import DateShowCaseComponent from 'features/examples/dateShowcase';
 
 const styles = StyleSheet.create({
+	divider: {
+		height: 30,
+	},
 	container: {
 		flex: 1,
 		padding: 30,
@@ -25,12 +29,16 @@ const styles = StyleSheet.create({
 	},
 });
 
-const Home: React.FC<HomeScreenProps> = () => {
+const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 	const dispatch = useDispatch();
 	const { colors } = useTheme();
 
 	const handleLogout = () => {
 		dispatch(logout());
+	};
+
+	const goToSettings = () => {
+		navigation.navigate('Settings');
 	};
 
 	return (
@@ -40,6 +48,14 @@ const Home: React.FC<HomeScreenProps> = () => {
 					{strings.home.message + Config.BUILD_VARIANT}
 				</Text>
 				<ReanimatedComponent />
+				<View style={styles.divider} />
+				<DateShowCaseComponent />
+				<View style={styles.divider} />
+				<TouchableOpacity onPress={goToSettings}>
+					<Text style={{ color: colors.text }}>
+						{strings.home.goToSettings}
+					</Text>
+				</TouchableOpacity>
 			</View>
 			<Button
 				title={strings.home.button}
