@@ -17,6 +17,7 @@ interface LogInResponse {
 	token: string;
 }
 
+// Sample login: username=kminchelle password=0lelplR
 const SessionService = {
 	logIn: async (req: LogInRequest): Promise<User> => {
 		const {
