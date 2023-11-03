@@ -16,10 +16,11 @@ import {
 	strings,
 } from 'services/localization';
 import { Button } from 'ui';
+import { spacing } from 'application/theme';
 
 const styles = StyleSheet.create({
 	container: {
-		padding: 30,
+		padding: spacing.xl,
 	},
 });
 

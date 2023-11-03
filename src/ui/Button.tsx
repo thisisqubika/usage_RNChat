@@ -1,6 +1,8 @@
 import { useTheme } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { radius, spacing } from 'application/theme/dimens';
+
 interface ButtonProps {
 	title: string;
 	onPress: () => void;
@@ -9,8 +11,8 @@ interface ButtonProps {
 
 const styles = StyleSheet.create({
 	container: {
-		borderRadius: 8,
-		paddingVertical: 10,
+		borderRadius: radius.s,
+		paddingVertical: spacing.s,
 	},
 	text: {
 		fontSize: 16,

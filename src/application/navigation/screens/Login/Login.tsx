@@ -8,11 +8,12 @@ import { login } from 'features/session/slice';
 import SessionService from 'services/api/session';
 import { strings } from 'services/localization';
 import { Button, TextInput } from 'ui';
+import { spacing } from 'application/theme';
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		padding: 30,
+		padding: spacing.xl,
 	},
 	content: {
 		alignItems: 'stretch',
@@ -20,14 +21,14 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	error: {
-		marginTop: 12,
+		marginTop: spacing.s,
 	},
 	input: {
-		marginTop: 16,
+		marginTop: spacing.m,
 	},
 	title: {
 		fontSize: 20,
-		marginBottom: 30,
+		marginBottom: spacing.xl,
 	},
 });
 

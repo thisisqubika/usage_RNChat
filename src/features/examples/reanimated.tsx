@@ -2,10 +2,12 @@ import { useTheme } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
+import { shadows } from 'application/theme/themes';
+import { radius } from 'application/theme/dimens';
 
 const styles = StyleSheet.create({
 	container: {
-		borderRadius: 10,
+		borderRadius: radius.m,
 		height: 100,
 	},
 	flex: {
@@ -31,6 +33,7 @@ const ReanimatedComponent = () => {
 				style={[
 					styles.container,
 					{ width, backgroundColor: colors.secondary },
+					shadows.primary,
 				]}>
 				<TouchableOpacity
 					style={styles.flex}

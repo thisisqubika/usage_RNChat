@@ -10,11 +10,12 @@ import ReanimatedComponent from 'features/examples/reanimated';
 import { logout } from 'features/session/slice';
 import { strings } from 'services/localization';
 import { Button } from 'ui';
+import { spacing } from 'application/theme';
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		padding: 30,
+		padding: spacing.xl,
 	},
 	content: {
 		alignItems: 'center',
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
 		height: 30,
 	},
 	title: {
-		marginBottom: 40,
+		marginBottom: spacing.xxl,
 	},
 });
 
