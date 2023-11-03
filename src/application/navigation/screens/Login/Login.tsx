@@ -1,14 +1,15 @@
 import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 
 import { LoginScreenProps } from 'application/navigation/types';
+import { spacing } from 'application/theme';
 import { login } from 'features/session/slice';
 import SessionService from 'services/api/session';
 import { strings } from 'services/localization';
 import { Button, TextInput } from 'ui';
-import { spacing } from 'application/theme';
+import { Body, H1 } from 'ui/text';
 
 const styles = StyleSheet.create({
 	container: {
@@ -27,7 +28,6 @@ const styles = StyleSheet.create({
 		marginTop: spacing.m,
 	},
 	title: {
-		fontSize: 20,
 		marginBottom: spacing.xl,
 	},
 });
@@ -58,9 +58,7 @@ const Login: React.FC<LoginScreenProps> = () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.content}>
-				<Text style={[styles.title, { color: colors.text }]}>
-					{strings.login.header}
-				</Text>
+				<H1 style={styles.title}>{strings.login.header}</H1>
 				<TextInput
 					placeholder={strings.login.email}
 					onChangeText={setEmail}
@@ -75,7 +73,7 @@ const Login: React.FC<LoginScreenProps> = () => {
 					secureTextEntry
 				/>
 				{!!error && (
-					<Text style={[styles.error, { color: colors.error }]}>{error}</Text>
+					<Body style={[styles.error, { color: colors.error }]}>{error}</Body>
 				)}
 			</View>
 			<Button

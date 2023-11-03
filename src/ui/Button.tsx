@@ -1,8 +1,8 @@
 import { useTheme } from '@react-navigation/native';
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { radius, spacing } from 'application/theme/dimens';
-
+import React from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import { ButtonLabel } from 'ui/text';
 interface ButtonProps {
 	title: string;
 	onPress: () => void;
@@ -11,13 +11,9 @@ interface ButtonProps {
 
 const styles = StyleSheet.create({
 	container: {
+		alignItems: 'center',
 		borderRadius: radius.s,
 		paddingVertical: spacing.s,
-	},
-	text: {
-		fontSize: 16,
-		fontWeight: 'bold',
-		textAlign: 'center',
 	},
 });
 
@@ -29,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({ title, onPress, testID }) => {
 			style={[styles.container, { backgroundColor: colors.primary }]}
 			onPress={onPress}
 			testID={testID}>
-			<Text style={[styles.text, { color: colors.text }]}>{title}</Text>
+			<ButtonLabel>{title}</ButtonLabel>
 		</TouchableOpacity>
 	);
 };
