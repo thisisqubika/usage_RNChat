@@ -8,7 +8,7 @@ import { api } from './axiosInstance';
  *
  * @param onUnauthorized 401 status handler function
  */
-export const useUnauthorizedCallbackSetUp = (onUnauthorized: () => void) => {
+export const useSetUpUnauthorizedCallback = (onUnauthorized: () => void) => {
 	const onUnauthorizedRef = useRef(onUnauthorized);
 	useEffect(() => {
 		onUnauthorizedRef.current = onUnauthorized;

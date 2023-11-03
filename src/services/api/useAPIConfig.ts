@@ -1,5 +1,5 @@
 import { useSetUpTokenWithAPI } from './useSetUpTokenWithAPI';
-import { useUnauthorizedCallbackSetUp } from './useUnauthorizedCallbackSetUp';
+import { useSetUpUnauthorizedCallback } from './useSetUpUnauthorizedCallback';
 
 interface APIConfiguration {
 	token: string | undefined;
@@ -13,5 +13,5 @@ interface APIConfiguration {
  */
 export const useAPIConfig = (config: APIConfiguration) => {
 	useSetUpTokenWithAPI(config.token);
-	useUnauthorizedCallbackSetUp(config.onUnauthorized);
+	useSetUpUnauthorizedCallback(config.onUnauthorized);
 };
