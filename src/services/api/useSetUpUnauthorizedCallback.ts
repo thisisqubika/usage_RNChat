@@ -4,9 +4,10 @@ import { api } from './axiosInstance';
 
 /**
  * Sets `onUnauthorized` function in axios interceptor to run when a response's
- * status is 401
+ * status is 401. Make sure to invalidate or refresh the token inside the
+ * `onUnauthorized` callback
  *
- * @param onUnauthorized 401 status handler function
+ * @param onUnauthorized 401 status handler callback
  */
 export const useSetUpUnauthorizedCallback = (onUnauthorized: () => void) => {
 	const onUnauthorizedRef = useRef(onUnauthorized);
