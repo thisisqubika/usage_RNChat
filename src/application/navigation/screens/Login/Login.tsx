@@ -61,6 +61,7 @@ const Login: React.FC<LoginScreenProps> = () => {
 					onChangeText={setUsername}
 					style={styles.input}
 					testID="username-input"
+					autoCapitalize="none"
 				/>
 				<TextInput
 					placeholder={strings.login.password}
