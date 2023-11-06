@@ -103,6 +103,16 @@ android {
             minSdkVersion rootProject.ext.minSdkVersion
             targetSdkVersion rootProject.ext.targetSdkVersion
         }
+        staging {
+            applicationId 'com.qubikaapp.stg'
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+        production {
+            applicationId 'com.qubikaapp.prd'
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
     }
     buildTypes {
         debug {
