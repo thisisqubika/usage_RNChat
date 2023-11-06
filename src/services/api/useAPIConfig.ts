@@ -7,7 +7,8 @@ interface APIConfiguration {
 }
 
 /**
- * Call this hook once at a top-level node in your hierarchy
+ * This hook should be called whenever the APIConfiguration (`token` or
+ * `onUnauthorized`) changes
  *
  * @param config the desired configuration of the API layer
  */
