@@ -11,9 +11,10 @@ export const es = {
 	},
 	login: {
 		header: 'Bienvenido',
-		email: 'Correo electrónico',
+		username: 'Nombre de usuario',
 		password: 'Contraseña',
 		button: 'Iniciar sesión',
+		error: 'Algo salió mal al iniciar sesión',
 	},
 	settings: {
 		switchTo: 'Cambiar a {0}',
