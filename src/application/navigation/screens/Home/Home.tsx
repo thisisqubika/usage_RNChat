@@ -1,6 +1,5 @@
-import { useTheme } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Config } from 'react-native-config';
 import { useDispatch } from 'react-redux';
 
@@ -10,11 +9,13 @@ import ReanimatedComponent from 'features/examples/reanimated';
 import { logout } from 'features/session/slice';
 import { strings } from 'services/localization';
 import { Button } from 'ui';
+import { spacing } from 'application/theme';
+import { Body, H1 } from 'ui/text';
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		padding: 30,
+		padding: spacing.xl,
 	},
 	content: {
 		alignItems: 'center',
@@ -22,16 +23,15 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	divider: {
-		height: 30,
+		height: 40,
 	},
 	title: {
-		marginBottom: 40,
+		marginBottom: spacing.xxl,
 	},
 });
 
 const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 	const dispatch = useDispatch();
-	const { colors } = useTheme();
 
 	const handleLogout = () => {
 		dispatch(logout());
@@ -44,17 +44,15 @@ const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.content}>
-				<Text style={[styles.title, { color: colors.text }]}>
+				<H1 style={styles.title}>
 					{strings.home.message + Config.BUILD_VARIANT}
-				</Text>
+				</H1>
 				<ReanimatedComponent />
 				<View style={styles.divider} />
 				<DateShowCaseComponent />
 				<View style={styles.divider} />
 				<TouchableOpacity onPress={goToSettings}>
-					<Text style={{ color: colors.text }}>
-						{strings.home.goToSettings}
-					</Text>
+					<Body>{strings.home.goToSettings}</Body>
 				</TouchableOpacity>
 			</View>
 			<Button

@@ -1,18 +1,20 @@
 import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 
 import { LoginScreenProps } from 'application/navigation/types';
+import { spacing } from 'application/theme';
 import { login } from 'features/session/slice';
 import SessionService from 'services/api/session';
 import { strings } from 'services/localization';
 import { Button, TextInput } from 'ui';
+import { Body, H1 } from 'ui/text';
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		padding: 30,
+		padding: spacing.xl,
 	},
 	content: {
 		alignItems: 'stretch',
@@ -20,14 +22,13 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	error: {
-		marginTop: 12,
+		marginTop: spacing.s,
 	},
 	input: {
-		marginTop: 16,
+		marginTop: spacing.m,
 	},
 	title: {
-		fontSize: 20,
-		marginBottom: 30,
+		marginBottom: spacing.xl,
 	},
 });
 
@@ -53,9 +54,7 @@ const Login: React.FC<LoginScreenProps> = () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.content}>
-				<Text style={[styles.title, { color: colors.text }]}>
-					{strings.login.header}
-				</Text>
+				<H1 style={styles.title}>{strings.login.header}</H1>
 				<TextInput
 					placeholder={strings.login.username}
 					onChangeText={setUsername}
@@ -71,7 +70,7 @@ const Login: React.FC<LoginScreenProps> = () => {
 					secureTextEntry
 				/>
 				{!!error && (
-					<Text style={[styles.error, { color: colors.error }]}>{error}</Text>
+					<Body style={[styles.error, { color: colors.error }]}>{error}</Body>
 				)}
 			</View>
 			<Button

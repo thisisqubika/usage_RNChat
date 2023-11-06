@@ -8,7 +8,7 @@ import { selectUser } from 'features/session/slice';
 
 import { AppStack } from './AppStack';
 import { AuthStack } from './AuthStack';
-import { DarkTheme, DefaultTheme, Theme } from './themes';
+import { DarkTheme, DefaultTheme, Theme } from 'application/theme';
 
 export const Navigator: React.FC = () => {
 	const user = useSelector(selectUser);
