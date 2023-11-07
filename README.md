@@ -44,7 +44,6 @@ The template already has scripts to execute the project calling a specific envir
 
 To define which env you want to use, just keep the structure `yarn [platform]: [environment]`
 
-
 DEV: `yarn ios` or `yarn android`
 
 STG: `yarn ios:staging` or `yarn android:staging`
@@ -73,11 +72,14 @@ To create a new scheme:
 - Then edit the newly created scheme to make it use a different env file. From the same "manage scheme" window:
 
   Expand the "Build" tab on the left menu
+
   - Click "Pre-actions", and under the plus sign select "New Run Script Action"
   - Where it says "Type a script or drag a script file", type: `echo ".env.qa" > /tmp/envfile` replacing `.env.qa` with your file.
+
 - Also, you will need to select the executable for the new schema:
 
   Expand the "Run" tab on the left menu
+
   - Under the "Executable" dropdown select the ".app" you would like to use for that schema
 
 ## Generate production version
@@ -116,3 +118,36 @@ The suggested architecutre is described [here](https://michalzalecki.com/elegant
   - `infrastructure`: Holds generally useful elements to your application, that support it in its function. The api and authentication submodules are set-up as prominent examples of this. State management (e.g. the redux store) also lives here.
   - `application`: Is the owner of your lifecycle and in charge of navigation. This module is the most specific to your app in terms of a "mobile executable", and cares the most about the device you might be running on, and the direct interaction with the user.
   - `features`: Is composed of submodules that fully contain all of the business-centric aspects of your application. Many examples are set up on the boilerplate of different possible usecases, but it is impossible that any "domain" submodule can be generally enough to be included in a boilerplate. Each domain can export, in its index file, components or reducers that can be bound to your Redux store or to one or more screens for its use.
+
+## Comments on decisions made and libraries used:
+
+### Localization
+
+The library used to localize the app is `react-native-localization`. By default if the app language is not supported by your string files, the first language in the object will be used.
+
+For dates we are using `date-fns` and therefore, in case you need to add a new language you will have to add a respective locale for it in the languages file.
+
+### Text components
+
+A text component creator function is used. It receives a text style (pre-declared with Stylesheet) and returns a Text component which we then export in the index file. In case you need to create a new text component the steps are (for example for a tab title):
+
+1. create a new style `tabTitleStyle` in `src/ui/text`
+2. near the bottom of `index.ts` in the same folder do `const TabTitle = makeText(tabTitleStyle)`
+3. add TabTitle in the `index.ts` exports
+4. use your component
+
+The order of colors used is:
+
+1. **style color:** the style passed when using the text component
+2. **custom style color:** the color used by the style declaration
+3. **theme color:** if no color attribute is passed it will use the app theme text color
+
+### Fonts
+
+Regarding fonts a custom font was added using `npx react-native-asset` and the font assets. Most probably, your project won't use the added **BeVietnam** font so in case you need to add a new one instructions are:
+
+1. remove existing fonts from assets/fonts
+2. add your custom fonts
+3. run `npx react-native-asset`
+
+You can go into [this instructions](https://mehrankhandev.medium.com/ultimate-guide-to-use-custom-fonts-in-react-native-77fcdf859cf4) to learn more
