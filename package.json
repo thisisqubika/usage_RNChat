@@ -5,8 +5,10 @@
 	"scripts": {
 		"android": "react-native run-android --mode developmentDebug",
 		"android:staging": "react-native run-android --mode stagingDebug",
-		"android:production": "react-native run-android --mode productionDebug",
-		"ios": "react-native run-ios",
+		"android:prod": "react-native run-android --mode productionDebug",
+		"ios": "react-native run-ios --scheme \"QubikaApp Development\"",
+		"ios:staging": "react-native run-ios --scheme \"QubikaApp Staging\" ",
+		"ios:prod": "react-native run-ios --scheme \"QubikaApp\"",
 		"lint": "eslint .",
 		"start": "react-native start",
 		"test": "jest",
