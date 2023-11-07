@@ -22,9 +22,7 @@ const SessionService = {
 	logIn: async (req: LogInRequest): Promise<User> => {
 		const {
 			data: { email },
-			// TODO @agustinferrari replace with: } = await api.post<LogInResponse>('/auth/login', req);
-			// when react-native-config is properly configured
-		} = await api.post<LogInResponse>('https://dummyjson.com/auth/login', req);
+		} = await api.post<LogInResponse>('/auth/login', req);
 		return { email };
 	},
 	logOut: async () => {

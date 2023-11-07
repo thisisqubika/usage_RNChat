@@ -4,12 +4,12 @@ import { Config } from 'react-native-config';
 import { useDispatch } from 'react-redux';
 
 import { HomeScreenProps } from 'application/navigation/types';
+import { spacing } from 'application/theme';
 import DateShowCaseComponent from 'features/examples/dateShowcase';
 import ReanimatedComponent from 'features/examples/reanimated';
 import { logout } from 'features/session/slice';
 import { strings } from 'services/localization';
 import { Button } from 'ui';
-import { spacing } from 'application/theme';
 import { Body, H1 } from 'ui/text';
 
 const styles = StyleSheet.create({
