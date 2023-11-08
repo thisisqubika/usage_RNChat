@@ -1,12 +1,10 @@
 import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useDispatch } from 'react-redux';
 
 import { LoginScreenProps } from 'application/navigation/types';
 import { spacing } from 'application/theme';
-import { login } from 'features/session/slice';
-import SessionService from 'services/api/session';
+import { useSessionContext } from 'features/session/SessionContext';
 import { strings } from 'services/localization';
 import { Button, TextInput } from 'ui';
 import { Body, H1 } from 'ui/text';
@@ -33,19 +31,15 @@ const styles = StyleSheet.create({
 });
 
 const Login: React.FC<LoginScreenProps> = () => {
+	const { logIn } = useSessionContext();
 	const [username, setUsername] = useState<string>('');
 	const [password, setPassword] = useState<string>('');
 	const [error, setError] = useState<string>();
-	const dispatch = useDispatch();
 	const { colors } = useTheme();
 
 	const handleLogin = async () => {
 		try {
-			const user = await SessionService.logIn({
-				username,
-				password,
-			});
-			dispatch(login(user));
+			await logIn(username, password);
 		} catch {
 			setError(strings.login.error);
 		}

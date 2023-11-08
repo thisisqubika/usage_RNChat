@@ -6,6 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { setupStore } from 'services/store/store';
 
+import { SessionProvider } from 'features/session/SessionProvider';
 import { loadAppLanguage } from 'services/localization';
 import { Navigator } from './navigation';
 
@@ -22,10 +23,14 @@ function App(): JSX.Element {
 	return (
 		<Provider store={store}>
 			<PersistGate persistor={persistor} onBeforeLift={onBeforeLift}>
-				<>
-					<StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-					<Navigator />
-				</>
+				<SessionProvider>
+					<>
+						<StatusBar
+							barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+						/>
+						<Navigator />
+					</>
+				</SessionProvider>
 			</PersistGate>
 		</Provider>
 	);
