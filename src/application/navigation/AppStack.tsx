@@ -1,10 +1,10 @@
-import React from 'react';
 import { useTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
 
 import Home from './screens/Home/Home';
-import { AppStackParamList } from './types';
 import Settings from './screens/Settings/Settings';
+import { AppStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 
@@ -19,7 +19,10 @@ export const AppStack = () => {
 				headerShadowVisible: false,
 				headerTintColor: colors.text,
 				headerTitleStyle: {
-					fontWeight: 'bold',
+					fontFamily: 'BeVietnam-Bold',
+				},
+				headerBackTitleStyle: {
+					fontFamily: 'BeVietnam-Regular',
 				},
 			}}>
 			<Stack.Screen name="Home" component={Home} />

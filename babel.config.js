@@ -22,6 +22,7 @@ module.exports = {
 					services: './src/services',
 					types: './src/types',
 					ui: './src/ui',
+					assets: './src/assets',
 				},
 			},
 		],
