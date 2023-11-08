@@ -81,7 +81,7 @@ android {
 
     namespace "com.qubikaapp"
     defaultConfig {
-        applicationId "com.qubikaapp"
+        applicationId "com.qubikaapp.prd"
         resValue "string", "build_config_package", "com.qubikaapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
