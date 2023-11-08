@@ -21,6 +21,12 @@
 		6A9CD5E52AFA7033000B394E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6A9CD5E92AFA7033000B394E /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */; };
 		6A9CD5EA2AFA7033000B394E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		6AC8A3F72AFBD330003EA018 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8A3F62AFBD330003EA018 /* Development-Info.plist */; };
+		6AC8A3F82AFBD330003EA018 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8A3F62AFBD330003EA018 /* Development-Info.plist */; };
+		6AC8A3F92AFBD330003EA018 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8A3F62AFBD330003EA018 /* Development-Info.plist */; };
+		6AC8A3FB2AFBD344003EA018 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */; };
+		6AC8A3FC2AFBD344003EA018 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */; };
+		6AC8A3FD2AFBD344003EA018 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */; };
 		7699B88040F8A987B510C191 /* libPods-QubikaApp-QubikaAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-QubikaApp-QubikaAppTests.a */; };
 		8E9190672AC4D6F500BC14FF /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */; };
 		B26AF34156D639C78399BB1E /* libPods-QubikaApp-QubikaApp Development.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FFB1C75EE1695A0A486614 /* libPods-QubikaApp-QubikaApp Development.a */; };
@@ -55,10 +61,10 @@
 		54F440457D4EF3EC8D44A673 /* Pods-QubikaApp-QubikaApp Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaApp Staging.debug.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaApp Staging/Pods-QubikaApp-QubikaApp Staging.debug.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-QubikaApp-QubikaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaAppTests.debug.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-QubikaApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QubikaApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A9C99732AFAA1DD00025459 /* Staging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Staging-Info.plist"; path = "/Users/agustin.ferrari/Documents/Work_Repositories/Reactika/ios/Staging-Info.plist"; sourceTree = "<absolute>"; };
-		6A9C99862AFAA21800025459 /* Development-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Development-Info.plist"; path = "/Users/agustin.ferrari/Documents/Work_Repositories/Reactika/ios/Development-Info.plist"; sourceTree = "<absolute>"; };
 		6A9CD5DE2AFA7029000B394E /* QubikaApp Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QubikaApp Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9CD5F12AFA7033000B394E /* QubikaApp Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QubikaApp Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC8A3F62AFBD330003EA018 /* Development-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Development-Info.plist"; path = "QubikaApp/Development-Info.plist"; sourceTree = "<group>"; };
+		6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Staging-Info.plist"; path = "QubikaApp/Staging-Info.plist"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-QubikaApp-QubikaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaAppTests.release.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = QubikaApp/BootSplash.storyboard; sourceTree = "<group>"; };
 		DD250ECCD04133BBF4B07A56 /* Pods-QubikaApp-QubikaApp Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaApp Staging.release.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaApp Staging/Pods-QubikaApp-QubikaApp Staging.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,12 +130,12 @@
 		13B07FAE1A68108700A75B9A /* QubikaApp */ = {
 			isa = PBXGroup;
 			children = (
+				6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */,
+				6AC8A3F62AFBD330003EA018 /* Development-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				6A9C99732AFAA1DD00025459 /* Staging-Info.plist */,
-				6A9C99862AFAA21800025459 /* Development-Info.plist */,
 				8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -338,6 +344,8 @@
 			files = (
 				8E9190672AC4D6F500BC14FF /* BootSplash.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6AC8A3FB2AFBD344003EA018 /* Staging-Info.plist in Resources */,
+				6AC8A3F72AFBD330003EA018 /* Development-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +355,8 @@
 			files = (
 				6A9CD5D62AFA7029000B394E /* BootSplash.storyboard in Resources */,
 				6A9CD5D72AFA7029000B394E /* Images.xcassets in Resources */,
+				6AC8A3FC2AFBD344003EA018 /* Staging-Info.plist in Resources */,
+				6AC8A3F82AFBD330003EA018 /* Development-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +366,8 @@
 			files = (
 				6A9CD5E92AFA7033000B394E /* BootSplash.storyboard in Resources */,
 				6A9CD5EA2AFA7033000B394E /* Images.xcassets in Resources */,
+				6AC8A3FD2AFBD344003EA018 /* Staging-Info.plist in Resources */,
+				6AC8A3F92AFBD330003EA018 /* Development-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
