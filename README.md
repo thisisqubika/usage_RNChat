@@ -82,6 +82,23 @@ To create a new scheme:
 
   - Under the "Executable" dropdown select the ".app" you would like to use for that schema
 
+#### Environment variables
+
+The template approach is separating the `js` env variables from the `native` ones.
+
+- The first should be written into the `.env` files, like `API_BASE_URL=XXX`.
+
+```
+API_BASE_URL=XXX
+```
+
+- The second should be written directly on the native config files each platform provides, for example the `Info.plist` (iOS) files or `res/values/strings.xml` (android).
+
+```xml
+<!-- Android res/values/strings.xml -->
+<string name="app_name">YourAppName</string>
+```
+
 ## Generate production version
 
 These are the steps to generate `.apk`, `.aab` and `.ipa` files
