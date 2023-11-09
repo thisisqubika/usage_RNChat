@@ -59,25 +59,19 @@ const Login: React.FC<LoginScreenProps> = () => {
 					placeholder={strings.login.username}
 					onChangeText={setUsername}
 					style={styles.input}
-					testID="username-input"
 					autoCapitalize="none"
 				/>
 				<TextInput
 					placeholder={strings.login.password}
 					onChangeText={setPassword}
 					style={styles.input}
-					testID="password-input"
 					secureTextEntry
 				/>
 				{!!error && (
 					<Body style={[styles.error, { color: colors.error }]}>{error}</Body>
 				)}
 			</View>
-			<Button
-				title={strings.login.button}
-				onPress={handleLogin}
-				testID="LoginButton"
-			/>
+			<Button title={strings.login.button} onPress={handleLogin} />
 		</View>
 	);
 };

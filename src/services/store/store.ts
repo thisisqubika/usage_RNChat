@@ -28,7 +28,7 @@ export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
 	return configureStore({
 		reducer: persistedReducer,
 		// Specify application middlewares, i.e. Logging, Additional API services
-		middleware: getDefaultMiddleware => {
+		middleware: (getDefaultMiddleware) => {
 			const middleware = getDefaultMiddleware({
 				serializableCheck: {
 					ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
