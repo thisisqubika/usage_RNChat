@@ -1,3 +1,4 @@
+import { Todo } from 'features/examples/todos/types';
 import { todosApi } from '../axiosInstance';
 
 interface TodoListRequest {
@@ -7,13 +8,6 @@ interface TodoListRequest {
 
 interface TodoDetailsRequest {
 	id: number;
-}
-
-interface Todo {
-	completed: boolean;
-	id: number;
-	title: string;
-	userId: number;
 }
 
 interface TodoListResponse {
