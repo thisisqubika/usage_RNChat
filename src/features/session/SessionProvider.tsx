@@ -1,9 +1,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { PropsWithChildren, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import SessionService from 'services/api/session';
 import { useAPIConfig } from 'services/api/useAPIConfig';
 import { SessionContext } from './SessionContext';
+import { useLogIn } from './queries';
 import {
 	logIn as logInAction,
 	logOut as logOutAction,
@@ -13,6 +13,7 @@ import {
 export const SessionProvider = ({ children }: PropsWithChildren) => {
 	const user = useSelector(selectUser);
 	const dispatch = useDispatch();
+	const { mutate, isPending: isPendingLogIn, error: logInError } = useLogIn();
 
 	const onUnauthorized = () => dispatch(logOutAction());
 	const token = user ? user.token : undefined;
@@ -40,15 +41,21 @@ export const SessionProvider = ({ children }: PropsWithChildren) => {
 		dispatch(logOutAction());
 	};
 
-	// TODO Add react-query
-	const logIn = async (username: string, password: string) => {
-		const newUser = await SessionService.logIn({ username, password });
-		dispatch(logInAction(newUser));
-	};
+	const logIn = (username: string, password: string) =>
+		mutate(
+			{ username, password },
+			{ onSuccess: (newUser) => dispatch(logInAction(newUser)) },
+		);
 
 	return (
 		<SessionContext.Provider
-			value={{ isAuthenticated: !!token, logIn, logOut }}>
+			value={{
+				isAuthenticated: !!token,
+				isPendingLogIn,
+				logIn,
+				logInError,
+				logOut,
+			}}>
 			{children}
 		</SessionContext.Provider>
 	);

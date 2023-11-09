@@ -7,6 +7,7 @@ interface ButtonProps {
 	title: string;
 	onPress: () => void;
 	testID?: string;
+	disabled?: boolean;
 }
 
 const styles = StyleSheet.create({
@@ -17,14 +18,20 @@ const styles = StyleSheet.create({
 	},
 });
 
-export const Button: React.FC<ButtonProps> = ({ title, onPress, testID }) => {
+export const Button: React.FC<ButtonProps> = ({
+	title,
+	onPress,
+	testID,
+	disabled,
+}) => {
 	const { colors } = useTheme();
 
 	return (
 		<TouchableOpacity
 			style={[styles.container, { backgroundColor: colors.primary }]}
 			onPress={onPress}
-			testID={testID}>
+			testID={testID}
+			disabled={disabled}>
 			<ButtonLabel>{title}</ButtonLabel>
 		</TouchableOpacity>
 	);

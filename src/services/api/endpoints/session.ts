@@ -1,5 +1,5 @@
 import { User } from 'features/session/slice';
-import { api } from './axiosInstance';
+import { api } from '../axiosInstance';
 
 interface LogInRequest {
 	username: string;

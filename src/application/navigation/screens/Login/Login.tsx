@@ -31,19 +31,12 @@ const styles = StyleSheet.create({
 });
 
 const Login: React.FC<LoginScreenProps> = () => {
-	const { logIn } = useSessionContext();
+	const { isPendingLogIn, logIn, logInError: error } = useSessionContext();
 	const [username, setUsername] = useState<string>('');
 	const [password, setPassword] = useState<string>('');
-	const [error, setError] = useState<string>();
 	const { colors } = useTheme();
 
-	const handleLogin = async () => {
-		try {
-			await logIn(username, password);
-		} catch {
-			setError(strings.login.error);
-		}
-	};
+	const handleLogin = () => logIn(username, password);
 
 	return (
 		<View style={styles.container}>
@@ -64,13 +57,16 @@ const Login: React.FC<LoginScreenProps> = () => {
 					secureTextEntry
 				/>
 				{!!error && (
-					<Body style={[styles.error, { color: colors.error }]}>{error}</Body>
+					<Body style={[styles.error, { color: colors.error }]}>
+						{strings.login.error}
+					</Body>
 				)}
 			</View>
 			<Button
 				title={strings.login.button}
 				onPress={handleLogin}
 				testID="LoginButton"
+				disabled={isPendingLogIn}
 			/>
 		</View>
 	);
