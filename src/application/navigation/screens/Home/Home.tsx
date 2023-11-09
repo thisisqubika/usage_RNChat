@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
 	divider: {
 		height: 40,
 	},
+	spacer: {
+		height: spacing.xl,
+	},
 	title: {
 		marginBottom: spacing.xxl,
 	},
@@ -34,6 +37,10 @@ const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 
 	const goToSettings = () => {
 		navigation.navigate('Settings');
+	};
+
+	const goToInfiniteQueryExample = () => {
+		navigation.navigate('Todos');
 	};
 
 	return (
@@ -48,6 +55,10 @@ const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 				<View style={styles.divider} />
 				<TouchableOpacity onPress={goToSettings}>
 					<Body>{strings.home.goToSettings}</Body>
+				</TouchableOpacity>
+				<View style={styles.spacer} />
+				<TouchableOpacity onPress={goToInfiniteQueryExample}>
+					<Body>{strings.home.goToInfiniteQuery}</Body>
 				</TouchableOpacity>
 			</View>
 			<Button
