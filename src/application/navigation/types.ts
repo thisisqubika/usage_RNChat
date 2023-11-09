@@ -4,7 +4,7 @@ export type AppStackParamList = {
 	Home: undefined;
 	Settings: undefined;
 	Todos: undefined;
-	TodoDetails: { id: string };
+	TodoDetails: { id: number };
 };
 
 export type AuthStackParamList = {

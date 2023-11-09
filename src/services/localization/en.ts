@@ -25,6 +25,9 @@ export const en = {
 		cancel: 'Cancel',
 	},
 	todos: {
+		true: 'yes',
+		false: 'no',
 		error: 'Whoops! Something went wrong.',
+		completed: 'Is it completed?',
 	},
 };

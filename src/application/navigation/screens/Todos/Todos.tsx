@@ -51,7 +51,7 @@ const Footer: React.FC<FooterProps> = ({ isFetchingNextPage }) => {
 
 const ItemSeparator = () => <View style={styles.itemSeparator} />;
 
-const Todos: React.FC<TodosScreenProps> = () => {
+const Todos: React.FC<TodosScreenProps> = ({ navigation }) => {
 	const { colors } = useTheme();
 	const {
 		data: todos,
@@ -62,14 +62,21 @@ const Todos: React.FC<TodosScreenProps> = () => {
 		fetchNextPage,
 	} = useTodos();
 
+	const onPress = useCallback(
+		(id: number) => () => {
+			navigation.navigate('TodoDetails', { id });
+		},
+		[navigation],
+	);
+
 	const renderItem: ListRenderItem<Todo> = useCallback(
 		({ item }) => (
 			<>
-				<TodoCard todo={item} />
+				<TodoCard todo={item} onPress={onPress(item.id)} />
 				<ItemSeparator />
 			</>
 		),
-		[],
+		[onPress],
 	);
 
 	if (!isSuccess) {

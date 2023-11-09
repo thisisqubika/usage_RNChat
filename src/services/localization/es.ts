@@ -24,6 +24,9 @@ export const es = {
 		cancel: 'Cancelar',
 	},
 	todos: {
+		true: 'sí',
+		false: 'no',
 		error: 'Ups! Algo salió mal.',
+		completed: '¿Está completo?',
 	},
 };
