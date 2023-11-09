@@ -8,6 +8,7 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:react-native/all',
 		'plugin:@typescript-eslint/recommended',
+		'plugin:@tanstack/eslint-plugin-query/recommended',
 	],
 	overrides: [
 		{
@@ -24,7 +25,13 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	plugins: ['react', 'react-native', '@typescript-eslint', 'jest'],
+	plugins: [
+		'react',
+		'react-native',
+		'@tanstack/query',
+		'@typescript-eslint',
+		'jest',
+	],
 	rules: {},
 	settings: {
 		react: {
