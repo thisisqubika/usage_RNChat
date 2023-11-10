@@ -50,11 +50,7 @@ const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 					<Body>{strings.home.goToInfiniteQuery}</Body>
 				</TouchableOpacity>
 			</View>
-			<Button
-				title={strings.home.button}
-				onPress={logOut}
-				testID="LogoutButton"
-			/>
+			<Button title={strings.home.button} onPress={logOut} />
 		</View>
 	);
 };

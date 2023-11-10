@@ -63,7 +63,6 @@ const Login: React.FC<LoginScreenProps> = () => {
 			<Button
 				title={strings.login.button}
 				onPress={handleLogin}
-				testID="LoginButton"
 				disabled={isPendingLogIn}
 			/>
 		</View>
