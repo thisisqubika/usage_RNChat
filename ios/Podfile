@@ -50,11 +50,11 @@ target 'QubikaApp' do
     # Pods for testing
   end
 
-  target 'QubikaApp Staging' do
+  target 'QubikaAppStaging' do
     inherit! :complete
   end
 
-  target 'QubikaApp Development' do
+  target 'QubikaAppDevelopment' do
     inherit! :complete
   end
 

@@ -16,8 +16,8 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "6A9CD5CD2AFA7029000B394E"
-                     BuildableName = "QubikaApp Staging.app"
-                     BlueprintName = "QubikaApp Staging"
+                     BuildableName = "QubikaAppStaging.app"
+                     BlueprintName = "QubikaAppStaging"
                      ReferencedContainer = "container:QubikaApp.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A9CD5CD2AFA7029000B394E"
-            BuildableName = "QubikaApp Staging.app"
-            BlueprintName = "QubikaApp Staging"
+            BuildableName = "QubikaAppStaging.app"
+            BlueprintName = "QubikaAppStaging"
             ReferencedContainer = "container:QubikaApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -99,8 +99,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A9CD5CD2AFA7029000B394E"
-            BuildableName = "QubikaApp Staging.app"
-            BlueprintName = "QubikaApp Staging"
+            BuildableName = "QubikaAppStaging.app"
+            BlueprintName = "QubikaAppStaging"
             ReferencedContainer = "container:QubikaApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
