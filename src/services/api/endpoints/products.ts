@@ -21,18 +21,13 @@ const ProductService = {
 	fetchProductList: async (
 		req: ProductListRequest,
 	): Promise<ProductListResponse> => {
-		const { data } = await api.get<ProductListResponse>(
-			'https://dummyjson.com/auth/products', // TODO use baseURL
-			{
-				params: req,
-			},
-		);
+		const { data } = await api.get<ProductListResponse>('/auth/products', {
+			params: req,
+		});
 		return data;
 	},
 	fetchProductDetails: async (req: ProductDetailsRequest) => {
-		const { data } = await api.get<Product>(
-			`https://dummyjson.com/auth/products/${req.id}`, // TODO use baseURL
-		);
+		const { data } = await api.get<Product>(`/auth/products/${req.id}`);
 		return data;
 	},
 };

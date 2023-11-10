@@ -1,10 +1,11 @@
 project.ext.envConfigFiles = [
         development: ".env.development",
+        staging: ".env.staging",
+        production: ".env.production",
 ]
 
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
-apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -80,7 +81,8 @@ android {
 
     namespace "com.qubikaapp"
     defaultConfig {
-        applicationId "com.qubikaapp"
+        applicationId "com.qubikaapp.prd"
+        resValue "string", "build_config_package", "com.qubikaapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         flavorDimensions "default"
@@ -98,6 +100,16 @@ android {
     productFlavors {
         development {
             applicationId 'com.qubikaapp.dev'
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+        staging {
+            applicationId 'com.qubikaapp.stg'
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+        production {
+            applicationId 'com.qubikaapp.prd'
             minSdkVersion rootProject.ext.minSdkVersion
             targetSdkVersion rootProject.ext.targetSdkVersion
         }
@@ -133,4 +145,6 @@ dependencies {
     }
 }
 
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); 
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+applyNativeModulesAppBuildGradle(project)

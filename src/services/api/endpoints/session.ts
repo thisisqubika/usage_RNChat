@@ -20,11 +20,7 @@ interface LogInResponse {
 // Sample login: username=kminchelle password=0lelplR
 const SessionService = {
 	logIn: async (req: LogInRequest): Promise<User> => {
-		const {
-			data,
-			// TODO @agustinferrari replace with: } = await api.post<LogInResponse>('/auth/login', req);
-			// when react-native-config is properly configured
-		} = await api.post<LogInResponse>('https://dummyjson.com/auth/login', req);
+		const { data } = await api.post<LogInResponse>('/auth/login', req);
 		return data;
 	},
 	logOut: async () => {
