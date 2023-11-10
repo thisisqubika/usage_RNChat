@@ -27,5 +27,6 @@ export const es = {
 		true: 'sí',
 		false: 'no',
 		error: 'Ups! Algo salió mal.',
+		brand: 'Marca',
 	},
 };

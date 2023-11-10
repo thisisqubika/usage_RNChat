@@ -59,7 +59,11 @@ const ProductDetails: React.FC<ProductDetailsScreenProps> = ({ route }) => {
 				/>
 			)}
 			{product.title && <H1>{product.title}</H1>}
-			{product.brand && <Body>Brand: {product.brand}</Body>}
+			{product.brand && (
+				<Body>
+					{strings.products.brand}: {product.brand}
+				</Body>
+			)}
 		</View>
 	);
 };

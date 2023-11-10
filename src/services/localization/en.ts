@@ -28,5 +28,6 @@ export const en = {
 		true: 'yes',
 		false: 'no',
 		error: 'Whoops! Something went wrong.',
+		brand: 'Brand',
 	},
 };
