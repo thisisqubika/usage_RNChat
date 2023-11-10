@@ -3,8 +3,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 export type AppStackParamList = {
 	Home: undefined;
 	Settings: undefined;
-	Todos: undefined;
-	TodoDetails: { id: number };
+	Products: undefined;
+	ProductDetails: { id: number };
 };
 
 export type AuthStackParamList = {
@@ -20,9 +20,9 @@ type AuthNavigatorScreenProps<T extends keyof AuthStackParamList> =
 export type HomeScreenProps = AppStackNavigatorScreenProps<'Home'>;
 export type LoginScreenProps = AuthNavigatorScreenProps<'Login'>;
 export type SettingsScreenProps = AppStackNavigatorScreenProps<'Settings'>;
-export type TodosScreenProps = AppStackNavigatorScreenProps<'Todos'>;
-export type TodoDetailsScreenProps =
-	AppStackNavigatorScreenProps<'TodoDetails'>;
+export type ProductsScreenProps = AppStackNavigatorScreenProps<'Products'>;
+export type ProductDetailsScreenProps =
+	AppStackNavigatorScreenProps<'ProductDetails'>;
 
 type AppParamList = AppStackParamList & AuthStackParamList;
 

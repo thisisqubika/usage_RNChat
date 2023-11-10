@@ -1,7 +1,7 @@
 import { useTheme } from '@react-navigation/native';
 import { shadows, spacing } from 'application/theme';
 import { radius } from 'application/theme/dimens';
-import { Todo } from 'features/examples/todos/types';
+import { Product } from 'features/examples/products/types';
 import React, { useCallback } from 'react';
 import {
 	Pressable,
@@ -12,12 +12,12 @@ import {
 } from 'react-native';
 import { Body, H2 } from 'ui/text';
 
-interface TodoCardProps {
-	todo: Todo;
+interface ProductCardProps {
+	product: Product;
 	onPress: () => void;
 }
 
-const TodoCard: React.FC<TodoCardProps> = ({ todo, onPress }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) => {
 	const { colors } = useTheme();
 
 	const cardStyle = useCallback(
@@ -26,18 +26,17 @@ const TodoCard: React.FC<TodoCardProps> = ({ todo, onPress }) => {
 			shadows.primary,
 			{
 				backgroundColor: colors.card,
-				shadowColor: todo.completed ? colors.primary : colors.error,
 			},
 			pressed ? shadows.pressed : {},
 		],
-		[colors, todo.completed],
+		[colors],
 	);
 
 	return (
 		<Pressable style={cardStyle} onPress={onPress}>
-			<H2>{todo.title}</H2>
+			<H2>{product.title}</H2>
 			{/* eslint-disable-next-line react-native/no-raw-text */}
-			<Body>ID: {todo.id}</Body>
+			<Body>ID: {product.id}</Body>
 		</Pressable>
 	);
 };
@@ -49,4 +48,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default TodoCard;
+export default ProductCard;

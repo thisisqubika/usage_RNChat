@@ -24,10 +24,9 @@ export const en = {
 		restart: 'Restart',
 		cancel: 'Cancel',
 	},
-	todos: {
+	products: {
 		true: 'yes',
 		false: 'no',
 		error: 'Whoops! Something went wrong.',
-		completed: 'Is it completed?',
 	},
 };

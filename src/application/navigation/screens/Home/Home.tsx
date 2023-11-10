@@ -40,7 +40,7 @@ const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 	};
 
 	const goToInfiniteQueryExample = () => {
-		navigation.navigate('Todos');
+		navigation.navigate('Products');
 	};
 
 	return (

@@ -23,10 +23,9 @@ export const es = {
 		restart: 'Reiniciar',
 		cancel: 'Cancelar',
 	},
-	todos: {
+	products: {
 		true: 'sí',
 		false: 'no',
 		error: 'Ups! Algo salió mal.',
-		completed: '¿Está completo?',
 	},
 };
