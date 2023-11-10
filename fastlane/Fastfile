@@ -26,7 +26,6 @@ platform :android do
 
     desc "Build the application for Production"
     lane :buildProduction do
-
         buildApp(flavor: "production")
     end
 
@@ -64,21 +63,38 @@ platform :ios do
     register_own_devices
 
     cert(development: true)
-    sigh(development: true, app_identifier: "com.domain.app.dev")
-    sigh(development: true, app_identifier: "com.domain.app.prod")
+    sigh(development: true, app_identifier: "com.qubikaapp.dev")
+    sigh(development: true, app_identifier: "com.qubikaapp.stg")
+    sigh(development: true, app_identifier: "com.qubikaapp.prd")
     cert
-    sigh(app_identifier: "com.domain.app.dev")
-    sigh(app_identifier: "com.domain.app.prod")
+    sigh(app_identifier: "com.qubikaapp.dev")
+    sigh(app_identifier: "com.qubikaapp.stg")
+    sigh(app_identifier: "com.qubikaapp.prd")
+  end
+
+  desc "Build the application for Development"
+  lane :buildDev do
+      buildApp(scheme: "QubikaAppDevelopment")
+  end
+
+  desc "Build the application for Staging"
+  lane :buildStaging do
+      buildApp(scheme: "QubikaAppStaging")
+  end
+
+  desc "Build the application for Production"
+  lane :buildProduction do
+      buildApp(scheme: "QubikaApp")
   end
 
   desc "Build the application"
-  lane :buildApp do
+  private_lane :buildApp do |options|
     app_store_connect_api_key
 
     signing
 
     build_number = increment_build_number
-    build_ios_app(scheme: "DecemberlabsApp")
+    build_ios_app(scheme: options[:scheme])
     upload_to_testflight(skip_waiting_for_build_processing: true)
   end
 
