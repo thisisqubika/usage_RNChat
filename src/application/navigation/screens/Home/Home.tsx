@@ -22,10 +22,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	divider: {
-		height: 40,
-	},
-	spacer: {
-		height: spacing.xl,
+		height: spacing.xxl,
 	},
 	title: {
 		marginBottom: spacing.xxl,
@@ -34,10 +31,6 @@ const styles = StyleSheet.create({
 
 const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 	const { logOut } = useSessionContext();
-
-	const goToSettings = () => {
-		navigation.navigate('Settings');
-	};
 
 	const goToInfiniteQueryExample = () => {
 		navigation.navigate('Products');
@@ -53,10 +46,6 @@ const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 				<View style={styles.divider} />
 				<DateShowCaseComponent />
 				<View style={styles.divider} />
-				<TouchableOpacity onPress={goToSettings}>
-					<Body>{strings.home.goToSettings}</Body>
-				</TouchableOpacity>
-				<View style={styles.spacer} />
 				<TouchableOpacity onPress={goToInfiniteQueryExample}>
 					<Body>{strings.home.goToInfiniteQuery}</Body>
 				</TouchableOpacity>

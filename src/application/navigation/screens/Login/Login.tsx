@@ -46,14 +46,12 @@ const Login: React.FC<LoginScreenProps> = () => {
 					placeholder={strings.login.username}
 					onChangeText={setUsername}
 					style={styles.input}
-					testID="username-input"
 					autoCapitalize="none"
 				/>
 				<TextInput
 					placeholder={strings.login.password}
 					onChangeText={setPassword}
 					style={styles.input}
-					testID="password-input"
 					secureTextEntry
 				/>
 				{!!error && (

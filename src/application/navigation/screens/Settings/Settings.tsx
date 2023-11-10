@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import { SettingsScreenProps } from 'application/navigation/types';
+import { spacing } from 'application/theme';
 import {
 	english,
 	getCurrentLanguage,
@@ -16,7 +17,6 @@ import {
 	strings,
 } from 'services/localization';
 import { Button } from 'ui';
-import { spacing } from 'application/theme';
 
 const styles = StyleSheet.create({
 	container: {
