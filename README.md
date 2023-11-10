@@ -136,35 +136,38 @@ The suggested architecutre is described [here](https://michalzalecki.com/elegant
   - `application`: Is the owner of your lifecycle and in charge of navigation. This module is the most specific to your app in terms of a "mobile executable", and cares the most about the device you might be running on, and the direct interaction with the user.
   - `features`: Is composed of submodules that fully contain all of the business-centric aspects of your application. Many examples are set up on the boilerplate of different possible usecases, but it is impossible that any "domain" submodule can be generally enough to be included in a boilerplate. Each domain can export, in its index file, components or reducers that can be bound to your Redux store or to one or more screens for its use.
 
-## Comments on decisions made and libraries used:
+## Caveats:
 
 ### Localization
 
-The library used to localize the app is `react-native-localization`. By default if the app language is not supported by your string files, the first language in the object will be used.
+The library used to localize the app is `react-native-localization`.
 
 For dates we are using `date-fns` and therefore, in case you need to add a new language you will have to add a respective locale for it in the languages file.
 
+**Disclaimer:** By default if the app language is not supported by your string files, the first language in the object will be used.
+
 ### Text components
 
-A text component creator function is used. It receives a text style (pre-declared with Stylesheet) and returns a Text component which we then export in the index file. In case you need to create a new text component the steps are (for example for a tab title):
+A creator function is used to centralize and simplify the creation of Text components.
+Create a new one by following these steps:
 
-1. create a new style `tabTitleStyle` in `src/ui/text`
-2. near the bottom of `index.ts` in the same folder do `const TabTitle = makeText(tabTitleStyle)`
-3. add TabTitle in the `index.ts` exports
-4. use your component
+1. Using StyleSheet, create a style inside `src/ui/text` folder
+2. Declare and create a new text component by using the `makeText` creator function, with the style just created
+3. Add your component to the `text` module exports
+4. Import it from anywhere inside the Navigator's scope and use it
 
-The order of colors used is:
+**Disclaimer:** styles are applied to the custom Text component following this order
 
-1. **style color:** the style passed when using the text component
-2. **custom style color:** the color used by the style declaration
-3. **theme color:** if no color attribute is passed it will use the app theme text color
+1. Theme: The theme's colors.text is applied first as the default color
+2. The style passed during the component declaration
+3. The style passed to the component when using it.
 
 ### Fonts
 
-Regarding fonts a custom font was added using `npx react-native-asset` and the font assets. Most probably, your project won't use the added **BeVietnam** font so in case you need to add a new one instructions are:
+A custom font was added as an example using `npx react-native-asset`. Steps to add a new one:
 
-1. remove existing fonts from assets/fonts
-2. add your custom fonts
-3. run `npx react-native-asset`
+1. Add font file to the `assets/fonts` folder. OTF format is preferred.
+2. Run `npx react-native-asset` to link the fonts to the native projects
+3. Rebuild the app to load the custom fonts in your app
 
 You can go into [this instructions](https://mehrankhandev.medium.com/ultimate-guide-to-use-custom-fonts-in-react-native-77fcdf859cf4) to learn more
