@@ -45,8 +45,6 @@
 		C5F57C3871BF48AC815E5C16 /* BeVietnam-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9E133FC234A476FAFC8264C /* BeVietnam-BoldItalic.ttf */; };
 		DBC8E258609042779D870321 /* BeVietnam-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC012912FB3941EA82E0471F /* BeVietnam-Thin.ttf */; };
 		FBF3F7034AA8E51BDD693F39 /* libPods-QubikaApp-QubikaApp Staging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A91B4C11E444951E6EC33 /* libPods-QubikaApp-QubikaApp Staging.a */; };
-		C5F57C3871BF48AC815E5C16 /* BeVietnam-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9E133FC234A476FAFC8264C /* BeVietnam-BoldItalic.ttf */; };
-		DBC8E258609042779D870321 /* BeVietnam-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC012912FB3941EA82E0471F /* BeVietnam-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,9 +99,6 @@
 		F5C5512841974803B30D47E9 /* BeVietnam-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/BeVietnam-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		F6FFB1C75EE1695A0A486614 /* libPods-QubikaApp-QubikaApp Development.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QubikaApp-QubikaApp Development.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0626A538FCD60B6813CEF8 /* Pods-QubikaApp-QubikaApp Development.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaApp Development.release.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaApp Development/Pods-QubikaApp-QubikaApp Development.release.xcconfig"; sourceTree = "<group>"; };
-		E9E133FC234A476FAFC8264C /* BeVietnam-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-BoldItalic.ttf"; path = "../src/assets/fonts/BeVietnam-BoldItalic.ttf"; sourceTree = "<group>"; };
-		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F5C5512841974803B30D47E9 /* BeVietnam-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/BeVietnam-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
