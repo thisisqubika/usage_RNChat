@@ -30,7 +30,7 @@ export const sessionSlice = createSlice({
 
 export const selectUser = createSelector(
 	(state: RootState) => state,
-	state => state.session.user ?? false,
+	(state) => state.session.user ?? false,
 );
 
 export const { logout, login } = sessionSlice.actions;
