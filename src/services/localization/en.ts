@@ -25,6 +25,7 @@ export const en = {
 		cancel: 'Cancel',
 	},
 	products: {
+		id: 'ID',
 		true: 'yes',
 		false: 'no',
 		error: 'Whoops! Something went wrong.',
