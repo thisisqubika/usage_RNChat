@@ -23,15 +23,16 @@ export const SessionProvider = ({ children }: PropsWithChildren) => {
 	// Logs out the user when loading the app for the first time
 	useEffect(() => {
 		(async () => {
-			const isFirstTimeRunningTheApp =
-				!(await AsyncStorage.getItem('HAS_RUN_BEFORE'));
-			if (isFirstTimeRunningTheApp) {
-				try {
+			try {
+				const isFirstTimeRunningTheApp =
+					!(await AsyncStorage.getItem('HAS_RUN_BEFORE'));
+				if (isFirstTimeRunningTheApp) {
 					await AsyncStorage.setItem('HAS_RUN_BEFORE', 'true');
 					dispatch(logOutAction());
-				} catch (error) {
-					console.error('Error on first time running the app: ', error);
 				}
+			} catch (error) {
+				console.error('Error on first time running the app: ', error);
+				dispatch(logOutAction());
 			}
 		})();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
