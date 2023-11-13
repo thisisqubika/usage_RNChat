@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-raw-text */
 import { useTheme } from '@react-navigation/native';
 import { shadows, spacing } from 'application/theme';
 import { radius } from 'application/theme/dimens';
@@ -34,12 +33,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) => {
 		[colors],
 	);
 
+	const idText = `${strings.products.id}: ${product.id}`;
+
 	return (
 		<Pressable style={cardStyle} onPress={onPress}>
 			<H2>{product.title}</H2>
-			<Body>
-				{strings.products.id}: {product.id}
-			</Body>
+			<Body>{idText}</Body>
 		</Pressable>
 	);
 };

@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-raw-text */
 import React, { useState } from 'react';
 import { ActivityIndicator, Image, StyleSheet, View } from 'react-native';
 
@@ -28,6 +27,7 @@ const ProductDetails: React.FC<ProductDetailsScreenProps> = ({ route }) => {
 	}
 
 	const image = product.images[0];
+	const brandText = `${strings.products.brand}: ${product.brand}`;
 
 	return (
 		<View style={styles.container}>
@@ -41,11 +41,7 @@ const ProductDetails: React.FC<ProductDetailsScreenProps> = ({ route }) => {
 				/>
 			)}
 			{product.title && <H1>{product.title}</H1>}
-			{product.brand && (
-				<Body>
-					{strings.products.brand}: {product.brand}
-				</Body>
-			)}
+			{product.brand && <Body>{brandText}</Body>}
 		</View>
 	);
 };
