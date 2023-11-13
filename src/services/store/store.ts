@@ -17,6 +17,7 @@ import EncryptedStorage from 'react-native-encrypted-storage';
 const rootPersistConfig = {
 	key: 'root',
 	storage: AsyncStorage,
+	blacklist: ['session'],
 };
 
 const sessionPersistConfig = {
