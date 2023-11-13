@@ -1,15 +1,52 @@
 import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useDispatch } from 'react-redux';
 
 import { LoginScreenProps } from 'application/navigation/types';
 import { spacing } from 'application/theme';
-import { login } from 'features/session/slice';
-import SessionService from 'services/api/session';
+import { useSessionContext } from 'features/session/SessionContext';
 import { strings } from 'services/localization';
 import { Button, TextInput } from 'ui';
 import { Body, H1 } from 'ui/text';
+
+const Login: React.FC<LoginScreenProps> = () => {
+	const { isPendingLogIn, logIn, logInError: error } = useSessionContext();
+	const [username, setUsername] = useState<string>('');
+	const [password, setPassword] = useState<string>('');
+	const { colors } = useTheme();
+
+	const handleLogin = () => logIn(username, password);
+
+	return (
+		<View style={styles.container}>
+			<View style={styles.content}>
+				<H1 style={styles.title}>{strings.login.header}</H1>
+				<TextInput
+					placeholder={strings.login.username}
+					onChangeText={setUsername}
+					style={styles.input}
+					autoCapitalize="none"
+				/>
+				<TextInput
+					placeholder={strings.login.password}
+					onChangeText={setPassword}
+					style={styles.input}
+					secureTextEntry
+				/>
+				{!!error && (
+					<Body style={[styles.error, { color: colors.error }]}>
+						{strings.login.error}
+					</Body>
+				)}
+			</View>
+			<Button
+				title={strings.login.button}
+				onPress={handleLogin}
+				disabled={isPendingLogIn}
+			/>
+		</View>
+	);
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -31,49 +68,5 @@ const styles = StyleSheet.create({
 		marginBottom: spacing.xl,
 	},
 });
-
-const Login: React.FC<LoginScreenProps> = () => {
-	const [username, setUsername] = useState<string>('');
-	const [password, setPassword] = useState<string>('');
-	const [error, setError] = useState<string>();
-	const dispatch = useDispatch();
-	const { colors } = useTheme();
-
-	const handleLogin = async () => {
-		try {
-			const user = await SessionService.logIn({
-				username,
-				password,
-			});
-			dispatch(login(user));
-		} catch {
-			setError(strings.login.error);
-		}
-	};
-
-	return (
-		<View style={styles.container}>
-			<View style={styles.content}>
-				<H1 style={styles.title}>{strings.login.header}</H1>
-				<TextInput
-					placeholder={strings.login.username}
-					onChangeText={setUsername}
-					style={styles.input}
-					autoCapitalize="none"
-				/>
-				<TextInput
-					placeholder={strings.login.password}
-					onChangeText={setPassword}
-					style={styles.input}
-					secureTextEntry
-				/>
-				{!!error && (
-					<Body style={[styles.error, { color: colors.error }]}>{error}</Body>
-				)}
-			</View>
-			<Button title={strings.login.button} onPress={handleLogin} />
-		</View>
-	);
-};
 
 export default Login;

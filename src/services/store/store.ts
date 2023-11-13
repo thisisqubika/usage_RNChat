@@ -12,17 +12,24 @@ import {
 } from 'redux-persist';
 
 import { sessionSlice } from 'features/session/slice';
+import EncryptedStorage from 'react-native-encrypted-storage';
 
-const persistConfig = {
+const rootPersistConfig = {
 	key: 'root',
 	storage: AsyncStorage,
+	blacklist: ['session'],
+};
+
+const sessionPersistConfig = {
+	key: 'session',
+	storage: EncryptedStorage,
 };
 
 const rootReducer = combineReducers({
-	session: sessionSlice.reducer,
+	session: persistReducer(sessionPersistConfig, sessionSlice.reducer),
 });
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(rootPersistConfig, rootReducer);
 
 export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
 	return configureStore({

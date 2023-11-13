@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react-native';
 import { LoginScreenProps } from 'application/navigation/types';
 import React from 'react';
-import SessionService from 'services/api/session';
+import SessionService from 'services/api/endpoints/session';
 import { strings } from 'services/localization';
 import withProviders from 'testing/utils/render';
 import { partial } from 'types/utils';
@@ -20,8 +20,14 @@ test('sends correct information to backend when logging in', () => {
 		withProviders(<Login {...loginProps} />),
 	);
 
-	fireEvent.changeText(getByPlaceholderText('Username'), testUsername);
-	fireEvent.changeText(getByPlaceholderText('Password'), testPassword);
+	fireEvent.changeText(
+		getByPlaceholderText(strings.login.username),
+		testUsername,
+	);
+	fireEvent.changeText(
+		getByPlaceholderText(strings.login.password),
+		testPassword,
+	);
 	fireEvent.press(getByText(strings.login.button));
 
 	expect(SessionService.logIn).toHaveBeenCalledWith({

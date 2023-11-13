@@ -3,8 +3,8 @@ import {
 	DefaultTheme as RNDefaultTheme,
 	Theme as RNTheme,
 } from '@react-navigation/native';
-import { colors } from './colors';
 import { StyleSheet } from 'react-native';
+import { colors } from './colors';
 
 export type Theme = RNTheme & {
 	colors: {
@@ -44,6 +44,16 @@ export const DefaultTheme: Theme = {
  * to get the same shadow on both platforms
  */
 export const shadows = StyleSheet.create({
+	pressed: {
+		elevation: 15,
+		shadowColor: colors.purple,
+		shadowOffset: {
+			width: 0,
+			height: 2,
+		},
+		shadowOpacity: 0.75,
+		shadowRadius: 3.84,
+	},
 	primary: {
 		elevation: 5,
 		shadowColor: colors.black,

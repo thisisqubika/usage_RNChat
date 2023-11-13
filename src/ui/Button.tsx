@@ -7,7 +7,27 @@ interface ButtonProps {
 	title: string;
 	onPress: () => void;
 	testID?: string;
+	disabled?: boolean;
 }
+
+export const Button: React.FC<ButtonProps> = ({
+	title,
+	onPress,
+	testID,
+	disabled,
+}) => {
+	const { colors } = useTheme();
+
+	return (
+		<TouchableOpacity
+			style={[styles.container, { backgroundColor: colors.primary }]}
+			onPress={onPress}
+			testID={testID}
+			disabled={disabled}>
+			<ButtonLabel>{title}</ButtonLabel>
+		</TouchableOpacity>
+	);
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -16,16 +36,3 @@ const styles = StyleSheet.create({
 		paddingVertical: spacing.s,
 	},
 });
-
-export const Button: React.FC<ButtonProps> = ({ title, onPress, testID }) => {
-	const { colors } = useTheme();
-
-	return (
-		<TouchableOpacity
-			style={[styles.container, { backgroundColor: colors.primary }]}
-			onPress={onPress}
-			testID={testID}>
-			<ButtonLabel>{title}</ButtonLabel>
-		</TouchableOpacity>
-	);
-};

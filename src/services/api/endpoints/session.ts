@@ -1,5 +1,5 @@
 import { User } from 'features/session/slice';
-import { api } from './axiosInstance';
+import { api } from '../axiosInstance';
 
 interface LogInRequest {
 	username: string;
@@ -7,23 +7,21 @@ interface LogInRequest {
 }
 
 interface LogInResponse {
-	id: number;
-	username: string;
 	email: string;
 	firstName: string;
-	lastName: string;
 	gender: string;
+	id: number;
 	image?: string;
+	lastName: string;
 	token: string;
+	username: string;
 }
 
 // Sample login: username=kminchelle password=0lelplR
 const SessionService = {
 	logIn: async (req: LogInRequest): Promise<User> => {
-		const {
-			data: { email },
-		} = await api.post<LogInResponse>('/auth/login', req);
-		return { email };
+		const { data } = await api.post<LogInResponse>('/auth/login', req);
+		return data;
 	},
 	logOut: async () => {
 		return new Promise((resolve) => setTimeout(resolve, 1000));

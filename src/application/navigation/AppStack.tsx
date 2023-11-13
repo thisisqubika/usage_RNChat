@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unstable-nested-components */
 import { useTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { GearIcon } from 'assets/icons';
 import React from 'react';
+
+import { GearIcon } from 'assets/icons';
 import { TouchableOpacity } from 'react-native';
 import Home from './screens/Home/Home';
+import ProductDetails from './screens/Products/ProductDetails';
+import Products from './screens/Products/Products';
 import Settings from './screens/Settings/Settings';
 import { AppStackParamList } from './types';
 
@@ -41,6 +44,8 @@ export const AppStack = () => {
 				}}
 			/>
 			<Stack.Screen name="Settings" component={Settings} />
+			<Stack.Screen name="Products" component={Products} />
+			<Stack.Screen name="ProductDetails" component={ProductDetails} />
 		</Stack.Navigator>
 	);
 };

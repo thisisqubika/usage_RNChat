@@ -6,11 +6,14 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { setupStore } from 'services/store/store';
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { SessionProvider } from 'features/session/SessionProvider';
 import { loadAppLanguage } from 'services/localization';
 import { Navigator } from './navigation';
 
 const store = setupStore();
 const persistor = persistStore(store);
+const queryClient = new QueryClient();
 
 function App(): JSX.Element {
 	const isDarkMode = useColorScheme() === 'dark';
@@ -20,14 +23,20 @@ function App(): JSX.Element {
 	};
 
 	return (
-		<Provider store={store}>
-			<PersistGate persistor={persistor} onBeforeLift={onBeforeLift}>
-				<>
-					<StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-					<Navigator />
-				</>
-			</PersistGate>
-		</Provider>
+		<QueryClientProvider client={queryClient}>
+			<Provider store={store}>
+				<PersistGate persistor={persistor} onBeforeLift={onBeforeLift}>
+					<SessionProvider>
+						<>
+							<StatusBar
+								barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+							/>
+							<Navigator />
+						</>
+					</SessionProvider>
+				</PersistGate>
+			</Provider>
+		</QueryClientProvider>
 	);
 }
 

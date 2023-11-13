@@ -8,6 +8,7 @@ export const en = {
 		message: 'Hello world! Build Variant: ',
 		button: 'Logout',
 		goToSettings: 'Go to settings',
+		goToInfiniteQuery: 'Go to infinite query example',
 	},
 	login: {
 		header: 'Welcome',
@@ -22,5 +23,12 @@ export const en = {
 			'To restart the language, the application must be restarted.',
 		restart: 'Restart',
 		cancel: 'Cancel',
+	},
+	products: {
+		id: 'ID',
+		true: 'yes',
+		false: 'no',
+		error: 'Whoops! Something went wrong.',
+		brand: 'Brand',
 	},
 };
