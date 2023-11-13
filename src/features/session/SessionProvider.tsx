@@ -4,11 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useAPIConfig } from 'services/api/useAPIConfig';
 import { SessionContext } from './SessionContext';
 import { useLogIn } from './queries';
-import {
-	logIn as logInAction,
-	logOut as logOutAction,
-	selectUser,
-} from './slice';
+import { logOut as logOutAction, selectUser } from './slice';
 
 export const SessionProvider = ({ children }: PropsWithChildren) => {
 	const user = useSelector(selectUser);
@@ -43,10 +39,7 @@ export const SessionProvider = ({ children }: PropsWithChildren) => {
 	};
 
 	const logIn = (username: string, password: string) =>
-		mutate(
-			{ username, password },
-			{ onSuccess: (newUser) => dispatch(logInAction(newUser)) },
-		);
+		mutate({ username, password });
 
 	return (
 		<SessionContext.Provider
