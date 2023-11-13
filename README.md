@@ -101,7 +101,7 @@ API_BASE_URL=XXX
 
 ## Generate release builds
 
-These are the steps to generate `.aab` and `.ipa` files
+These are the steps to generate `.aab` or `.apk` and `.ipa` files
 
 ### Install dependencies
 
@@ -112,9 +112,9 @@ These are the steps to generate `.aab` and `.ipa` files
 
 1. Generate an upload key for signing the release build
 2. Set up gradle variables
-3. Execute `fastlane android build[Type]`
+3. Execute `fastlane android build[Type][Output]`
 
-Note: `Type` in `Dev, Staging, Prod`
+Note: `Type` in `Dev`, `Staging`, `Prod` and `Output` in `APK`, `AAB`
 
 For more info please about generating the key go to https://reactnative.dev/docs/signed-apk-android
 
