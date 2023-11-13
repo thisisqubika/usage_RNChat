@@ -9,27 +9,6 @@ import { strings } from 'services/localization';
 import { Button, TextInput } from 'ui';
 import { Body, H1 } from 'ui/text';
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		padding: spacing.xl,
-	},
-	content: {
-		alignItems: 'stretch',
-		flex: 1,
-		justifyContent: 'center',
-	},
-	error: {
-		marginTop: spacing.s,
-	},
-	input: {
-		marginTop: spacing.m,
-	},
-	title: {
-		marginBottom: spacing.xl,
-	},
-});
-
 const Login: React.FC<LoginScreenProps> = () => {
 	const { isPendingLogIn, logIn, logInError: error } = useSessionContext();
 	const [username, setUsername] = useState<string>('');
@@ -68,5 +47,26 @@ const Login: React.FC<LoginScreenProps> = () => {
 		</View>
 	);
 };
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		padding: spacing.xl,
+	},
+	content: {
+		alignItems: 'stretch',
+		flex: 1,
+		justifyContent: 'center',
+	},
+	error: {
+		marginTop: spacing.s,
+	},
+	input: {
+		marginTop: spacing.m,
+	},
+	title: {
+		marginBottom: spacing.xl,
+	},
+});
 
 export default Login;

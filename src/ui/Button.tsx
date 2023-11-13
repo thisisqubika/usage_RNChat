@@ -10,14 +10,6 @@ interface ButtonProps {
 	disabled?: boolean;
 }
 
-const styles = StyleSheet.create({
-	container: {
-		alignItems: 'center',
-		borderRadius: radius.s,
-		paddingVertical: spacing.s,
-	},
-});
-
 export const Button: React.FC<ButtonProps> = ({
 	title,
 	onPress,
@@ -36,3 +28,11 @@ export const Button: React.FC<ButtonProps> = ({
 		</TouchableOpacity>
 	);
 };
+
+const styles = StyleSheet.create({
+	container: {
+		alignItems: 'center',
+		borderRadius: radius.s,
+		paddingVertical: spacing.s,
+	},
+});

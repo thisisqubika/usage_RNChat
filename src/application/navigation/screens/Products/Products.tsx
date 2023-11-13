@@ -12,26 +12,6 @@ import { strings } from 'services/localization';
 import ProductCard from 'ui/cards/ProductCard';
 import { Body } from 'ui/text';
 
-const styles = StyleSheet.create({
-	centered: {
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	container: {
-		flex: 1,
-	},
-	contentContainer: {
-		padding: spacing.xl,
-	},
-	fetchingNextPageIndicator: {
-		alignSelf: 'center',
-		marginVertical: spacing.xs,
-	},
-	itemSeparator: {
-		height: spacing.l,
-	},
-});
-
 const keyExtractor = (product: Product, index: number) =>
 	`product-${product.id}-${index}`;
 
@@ -103,5 +83,25 @@ const Products: React.FC<ProductsScreenProps> = ({ navigation }) => {
 		</View>
 	);
 };
+
+const styles = StyleSheet.create({
+	centered: {
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	container: {
+		flex: 1,
+	},
+	contentContainer: {
+		padding: spacing.xl,
+	},
+	fetchingNextPageIndicator: {
+		alignSelf: 'center',
+		marginVertical: spacing.xs,
+	},
+	itemSeparator: {
+		height: spacing.l,
+	},
+});
 
 export default Products;

@@ -9,24 +9,6 @@ import { useProductDetails } from 'features/examples/products/queries';
 import { strings } from 'services/localization';
 import { Body, H1 } from 'ui/text';
 
-const styles = StyleSheet.create({
-	container: {
-		alignItems: 'center',
-		flex: 1,
-		gap: spacing.m,
-		justifyContent: 'center',
-		padding: spacing.xl,
-	},
-	hiddenImage: {
-		height: 0,
-	},
-	image: {
-		aspectRatio: 1,
-		borderRadius: radius.l,
-		height: 200,
-	},
-});
-
 const ProductDetails: React.FC<ProductDetailsScreenProps> = ({ route }) => {
 	const {
 		data: product,
@@ -67,5 +49,23 @@ const ProductDetails: React.FC<ProductDetailsScreenProps> = ({ route }) => {
 		</View>
 	);
 };
+
+const styles = StyleSheet.create({
+	container: {
+		alignItems: 'center',
+		flex: 1,
+		gap: spacing.m,
+		justifyContent: 'center',
+		padding: spacing.xl,
+	},
+	hiddenImage: {
+		height: 0,
+	},
+	image: {
+		aspectRatio: 1,
+		borderRadius: radius.l,
+		height: 200,
+	},
+});
 
 export default ProductDetails;

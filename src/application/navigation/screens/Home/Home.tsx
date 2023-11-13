@@ -11,24 +11,6 @@ import { strings } from 'services/localization';
 import { Button } from 'ui';
 import { Body, H1 } from 'ui/text';
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		padding: spacing.xl,
-	},
-	content: {
-		alignItems: 'center',
-		flex: 1,
-		justifyContent: 'center',
-	},
-	divider: {
-		height: spacing.xxl,
-	},
-	title: {
-		marginBottom: spacing.xxl,
-	},
-});
-
 const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 	const { logOut } = useSessionContext();
 
@@ -54,5 +36,23 @@ const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
 		</View>
 	);
 };
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		padding: spacing.xl,
+	},
+	content: {
+		alignItems: 'center',
+		flex: 1,
+		justifyContent: 'center',
+	},
+	divider: {
+		height: spacing.xxl,
+	},
+	title: {
+		marginBottom: spacing.xxl,
+	},
+});
 
 export default Home;
