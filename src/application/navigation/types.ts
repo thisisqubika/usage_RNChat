@@ -24,6 +24,8 @@ export type ProductsScreenProps = AppStackNavigatorScreenProps<'Products'>;
 export type ProductDetailsScreenProps =
 	AppStackNavigatorScreenProps<'ProductDetails'>;
 
+export type ProductsScreenNavigationProp = ProductsScreenProps['navigation'];
+
 type AppParamList = AppStackParamList & AuthStackParamList;
 
 declare global {

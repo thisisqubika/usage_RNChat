@@ -3,7 +3,10 @@ import React, { useCallback } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { FlashList, ListRenderItem } from '@shopify/flash-list';
-import { ProductsScreenProps } from 'application/navigation/types';
+import {
+	ProductsScreenNavigationProp,
+	ProductsScreenProps,
+} from 'application/navigation/types';
 import { spacing } from 'application/theme';
 import { useProducts } from 'features/examples/products/queries';
 import { Product } from 'features/examples/products/types';
@@ -32,6 +35,11 @@ const Footer: React.FC<FooterProps> = ({ isFetchingNextPage }) => {
 
 const ItemSeparator = () => <View style={styles.itemSeparator} />;
 
+const createOnPress =
+	(navigation: ProductsScreenNavigationProp, id: number) => () => {
+		navigation.navigate('ProductDetails', { id });
+	};
+
 const Products: React.FC<ProductsScreenProps> = ({ navigation }) => {
 	const { colors } = useTheme();
 	const {
@@ -43,21 +51,17 @@ const Products: React.FC<ProductsScreenProps> = ({ navigation }) => {
 		fetchNextPage,
 	} = useProducts();
 
-	const onPress = useCallback(
-		(id: number) => () => {
-			navigation.navigate('ProductDetails', { id });
-		},
-		[navigation],
-	);
-
 	const renderItem: ListRenderItem<Product> = useCallback(
 		({ item }) => (
 			<>
-				<ProductCard product={item} onPress={onPress(item.id)} />
+				<ProductCard
+					product={item}
+					onPress={createOnPress(navigation, item.id)}
+				/>
 				<ItemSeparator />
 			</>
 		),
-		[onPress],
+		[navigation],
 	);
 
 	if (!isSuccess) {
