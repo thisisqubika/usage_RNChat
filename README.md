@@ -164,11 +164,22 @@ Create a new one by following these steps:
 3. Add your component to the `text` module exports
 4. Import it from anywhere inside the Navigator's scope and use it
 
-**Disclaimer:** styles are applied to the custom Text component following this order
+**Disclaimer 1:** styles are applied to the custom Text component following this order
 
 1. Theme: The theme's colors.text is applied first as the default color
 2. The style passed during the component declaration
 3. The style passed to the component when using it.
+
+**Disclaimer 2:** You should not use raw text inside these components (eslint will prompt you about this). Instead, you should use constants/variables that contain the text you would like to display, like so:
+
+```typescript
+// ... component
+
+const foo = 'bar'; // constant that contains the text displayed
+
+// Suppose H1 is a text component
+return <H1>{ foo }</H1>;
+```
 
 ### Fonts
 
