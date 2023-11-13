@@ -277,12 +277,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods (>= 1.11.3)
+  cocoapods (~> 1.13)
   fastlane
   fastlane-plugin-increment_version_code
-
-RUBY VERSION
-   ruby 2.6.10p210
 
 BUNDLED WITH
    2.4.22

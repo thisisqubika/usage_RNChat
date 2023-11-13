@@ -15,29 +15,53 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## Android
 
-### android buildDev
+### android buildDevAAB
 
 ```sh
-[bundle exec] fastlane android buildDev
+[bundle exec] fastlane android buildDevAAB
 ```
 
-Build the application for Development
+Build the aab for Development
 
-### android buildStaging
+### android buildDevAPK
 
 ```sh
-[bundle exec] fastlane android buildStaging
+[bundle exec] fastlane android buildDevAPK
 ```
 
-Build the application for Staging
+Build the apk for Development
 
-### android buildProduction
+### android buildStagingAAB
 
 ```sh
-[bundle exec] fastlane android buildProduction
+[bundle exec] fastlane android buildStagingAAB
 ```
 
-Build the application for Production
+Build the aab for Staging
+
+### android buildStagingAPK
+
+```sh
+[bundle exec] fastlane android buildStagingAPK
+```
+
+Build the apk for Staging
+
+### android buildProductionAAB
+
+```sh
+[bundle exec] fastlane android buildProductionAAB
+```
+
+Build the aab for Production
+
+### android buildProductionAPK
+
+```sh
+[bundle exec] fastlane android buildProductionAPK
+```
+
+Build the apk for Production
 
 ----
 
