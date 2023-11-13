@@ -52,13 +52,29 @@ Build the application for Production
 
 Set up signing for the application
 
-### ios buildApp
+### ios buildDev
 
 ```sh
-[bundle exec] fastlane ios buildApp
+[bundle exec] fastlane ios buildDev
 ```
 
-Build the application
+Build the application for Development
+
+### ios buildStaging
+
+```sh
+[bundle exec] fastlane ios buildStaging
+```
+
+Build the application for Staging
+
+### ios buildProduction
+
+```sh
+[bundle exec] fastlane ios buildProduction
+```
+
+Build the application for Production
 
 ----
 
