@@ -99,30 +99,35 @@ API_BASE_URL=XXX
 <string name="app_name">YourAppName</string>
 ```
 
-## Generate production version
+## Generate release builds
 
-These are the steps to generate `.apk`, `.aab` and `.ipa` files
+These are the steps to generate `.aab` and `.ipa` files
+
+### Install dependencies
+
+1. Install bundler: `gem install bundler`
+2. Install dependencies using bundler: `bundle install`
 
 ### Android
 
-1. Generate an upload key
-2. Setting up gradle variables
-3. Go to the android folder
-4. Execute `./gradlew assemble[Env][BuildType]`
+1. Generate an upload key for signing the release build
+2. Set up gradle variables
+3. Execute `fastlane android build[Type]`
 
-Note: You have three options to execute the project
-`assemble:` Generates an apk that you can share with others.
-`install:` When you want to test a release build on a connected device.
-`bundle:` When you are uploading the app to the Play Store.
+Note: `Type` in `Dev, Staging, Prod`
 
-For more info please go to https://reactnative.dev/docs/signed-apk-android
+For more info please about generating the key go to https://reactnative.dev/docs/signed-apk-android
 
 ### iOS
 
-1. Go to the Xcode
-2. Select the schema
-3. Select 'Any iOS device' as target
-4. Product -> Archive
+1. Create and download an Appstore Connect API key.
+2. Fill in `APP_STORE_CONNECT_API_KEY` properties in the `fastlane/.env.default`.
+3. Fill in the TEAM id values, for team id and itc team id in the `fastlane/.env.default`.
+4. Execute `fastlane android build[Type]`
+
+Note:
+
+- `Type` in `Dev, Staging, Prod`
 
 For more info please go to https://reactnative.dev/docs/publishing-to-app-store
 
