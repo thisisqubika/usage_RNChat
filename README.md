@@ -38,6 +38,16 @@ Keep in mind that if you do this, you'll have to **install and link** all depend
 
 ## Setup environments
 
+### NPM or Yarn
+
+If your preferred package manager is NPM then you are good to go, the `package-lock` is already in the project and github workflows are using it too for caching.
+
+In case you prefer Yarn, that's fine too! Steps to follow are:
+
+1. Delete `package-lock.json` file
+2. Run `yarn install`
+3. In the `./github/workflows` follow the steps in the `codeQualityCheck.yaml` file to start caching with yarn lock instead of npm. This caching is crucial as reduces the load on GitHub's servers by storing and reusing dependencies instead of downloading them afresh with each run, and therefore, leads to faster execution times.
+
 ### Using scripts from console
 
 The template already has scripts to execute the project calling a specific environment defined into the package.json file. Keep in mind that if you are going to create new `envs` you have to define the script to build the project properly.
