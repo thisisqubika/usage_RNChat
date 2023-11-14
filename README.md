@@ -136,6 +136,14 @@ The suggested architecutre is described [here](https://michalzalecki.com/elegant
   - `application`: Is the owner of your lifecycle and in charge of navigation. This module is the most specific to your app in terms of a "mobile executable", and cares the most about the device you might be running on, and the direct interaction with the user.
   - `features`: Is composed of submodules that fully contain all of the business-centric aspects of your application. Many examples are set up on the boilerplate of different possible usecases, but it is impossible that any "domain" submodule can be generally enough to be included in a boilerplate. Each domain can export, in its index file, components or reducers that can be bound to your Redux store or to one or more screens for its use.
 
+## Authentication
+
+The authentication session handling is mainly done through `SessionContext` and `SessionProvider`. These two provide `logIn` and `logOut` methods (which should be used instead of directly using the `SessionService`), and they also provide some useful info regarding the `logIn` query (i.e., `isPendingLogIn` and `logInError`) as well as the `isAuthenticated` flag (which is already used to check which navigation stack should be mounted).
+
+The user info can be accessed through `Redux` under the `session` slice. This slice is persisted using `EncryptedStorage`.
+
+This authentication implementation already handles the api authentication too. This is done in `SessionProvider` through the usage of `useAPIConfig`. By default, the module sets up a "Bearer Token" type of authentication, and also logs out the user when the api detects a 401 Unauthorized error code in a response. Although this behavior is relatively common, your use case could be different; you can modify the authentication method used in `useSetUpTokenWithAPI` and the unauthorized behavior (the callback) in `SessionProvider`'s usage of `useAPIConfig`.
+
 ## Caveats:
 
 ### Localization
@@ -156,11 +164,22 @@ Create a new one by following these steps:
 3. Add your component to the `text` module exports
 4. Import it from anywhere inside the Navigator's scope and use it
 
-**Disclaimer:** styles are applied to the custom Text component following this order
+**Disclaimer 1:** styles are applied to the custom Text component following this order
 
 1. Theme: The theme's colors.text is applied first as the default color
 2. The style passed during the component declaration
 3. The style passed to the component when using it.
+
+**Disclaimer 2:** You should not use raw text inside these components (eslint will prompt you about this). Instead, you should use constants/variables that contain the text you would like to display, like so:
+
+```typescript
+// ... component
+
+const foo = 'bar'; // constant that contains the text displayed
+
+// Suppose H1 is a text component
+return <H1>{ foo }</H1>;
+```
 
 ### Fonts
 
