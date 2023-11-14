@@ -9,6 +9,7 @@ module.exports = {
 		'plugin:react-native/all',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@tanstack/eslint-plugin-query/recommended',
+		'plugin:prettier/recommended',
 	],
 	overrides: [
 		{
