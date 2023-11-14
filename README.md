@@ -105,8 +105,7 @@ These are the steps to generate `.aab` or `.apk` and `.ipa` files
 
 ### Install dependencies
 
-1. Install bundler: `gem install bundler`
-2. Install dependencies using bundler: `bundle install`
+1. Install dependencies using bundler: `bundle install`
 
 ### Android
 
