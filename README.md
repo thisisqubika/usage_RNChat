@@ -55,7 +55,7 @@ If you want to roll on your own and don't want to use Reactika as a template, yo
 
 Keep in mind that if you do this, you'll have to **install** all the dependencies (as well as the corresponding native code for each of the libraries that require it).
 
-## <a name="setup_envs"></a> ⚙️ Setup environments
+## <a name="setup_envs"></a> ⚙️ Setting up environments
 
 ### Choose your package manager
 
@@ -69,7 +69,7 @@ In case you prefer yarn, that's fine too! Steps to follow are:
 
 3. In the `./github/workflows` follow the steps in the `codeQualityCheck.yaml` file to start caching with yarn. Caching is crucial to reduce the load on GitHub's runners by storing and reusing dependencies during runs.
 
-### Environments
+### <a name="environments"></a> Environments
 
 The project comes with `dev`, `stg` and `prd` as the default environments. If your project needs others, just read through this section and make the required changes on the native projects.
 
@@ -147,7 +147,7 @@ These are the steps to generate `.aab` or `.apk` and `.ipa` files, using Fastlan
 
 1. Generate an upload key for signing the release build
 
-2. Set up gradle variables as explained in [Environments]()
+2. Set up gradle variables as explained in [Environments](#environments)
 
 3. Execute `fastlane android build[Type][Output]`
 
