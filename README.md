@@ -2,14 +2,13 @@
 <br>
 
 <p  align="center">
-<div>
 
 <img  src="https://media.licdn.com/dms/image/D4E0BAQFzvHK-9_P_vg/company-logo_200_200/0/1689269711421/moove_it_logo?e=2147483647&v=beta&t=fnCGH4R1s61rp7nMLEAxbklxp3rkbTw-SfXtRQYE1fg"  width="152"  />
 
 <img  src="https://reactnative.dev/img/logo-og.png"  width="290"  />
 
 <img  src="https://media.licdn.com/dms/image/D4E0BAQFzvHK-9_P_vg/company-logo_200_200/0/1689269711421/moove_it_logo?e=2147483647&v=beta&t=fnCGH4R1s61rp7nMLEAxbklxp3rkbTw-SfXtRQYE1fg" width="152"  />
-</div>
+
 </p>
 
 <h1  align="center">Reactika</h1>
