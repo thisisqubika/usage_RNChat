@@ -55,9 +55,9 @@ If you want to roll on your own and don't want to use Reactika as a template, yo
 
 Keep in mind that if you do this, you'll have to **install** all the dependencies (as well as the corresponding native code for each of the libraries that require it).
 
-## <a name="setup_envs"></a> ⚙️ Setting up environments
+## <a name="setup_envs"></a> ⚙️ Set up environments
 
-### Choose your package manager
+### 🪛 Choose your package manager
 
 If your preferred package manager is npm then you are good to go, the `package-lock.json` is already commited in the project and github workflows are using it too for caching.
 
@@ -69,7 +69,7 @@ In case you prefer yarn, that's fine too! Steps to follow are:
 
 3. In the `./github/workflows` follow the steps in the `codeQualityCheck.yaml` file to start caching with yarn. Caching is crucial to reduce the load on GitHub's runners by storing and reusing dependencies during runs.
 
-### <a name="environments"></a> Environments
+### <a name="environments"></a> 🧮 Environments
 
 The project comes with `dev`, `stg` and `prd` as the default environments. If your project needs others, just read through this section and make the required changes on the native projects.
 
@@ -135,7 +135,7 @@ API_BASE_URL=XXX
 <string  name="app_name">YourAppName</string>
 ```
 
-### Generate release builds
+### 🪄 Generate release builds
 
 These are the steps to generate `.aab` or `.apk` and `.ipa` files, using Fastlane, a Ruby open source tool.
 
@@ -155,7 +155,7 @@ Note: `Type` in `[Dev, Staging, Prod]` and `Output` in `[APK, AAB]`
 
 For more info please about generating the key refer to [Official Android Release Process](https://reactnative.dev/docs/signed-apk-android)
 
-### iOS
+#### Step 3. iOS setup
 
 1. Create and download an Appstore Connect API key.
 
@@ -185,7 +185,7 @@ The suggested architecutre follows the ideas discussed in [Elegan FE Architectur
 
 - `features`: Is composed of submodules that fully contain all of the business-centric aspects of your application. Many examples are set up on the boilerplate of different possible usecases, but it is impossible that any "domain" submodule can be generally enough to be included in a boilerplate. Each domain can export, in its index file, components or reducers that can be bound to your Redux store or to one or more screens for its use.
 
-## Design Decisions:
+## 👀 Design Decisions:
 
 ### 🔓 Authentication
 
