@@ -1,0 +1,35 @@
+name: Code quality check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  lint-compile-and-check-format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm' # Change to 'yarn' if you are using Yarn
+          cache-dependency-path: '**/package-lock.json'
+          # cache-dependency-path: '**/yarn.lock'
+
+      - name: Install Project Dependencies
+        run: npm ci
+        # run: yarn install --frozen-lockfile # Change to this command if you are using Yarn
+        working-directory: ./
+
+      - name: Run Linter
+        run: npm run lint
+        # run: yarn lint  # Change to this command if you are using Yarn
+        working-directory: ./
+
+      - name: Check Code Formatting with Prettier
+        run: npx prettier --check .
+        working-directory: ./

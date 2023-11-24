@@ -1,0 +1,127 @@
+fastlane_version "2.206.2"
+fastlane_require "dotenv"
+
+before_all do
+  Dotenv.overload ".env.secret"
+end
+
+# TODO: Look for the `TODO` tags in this file!
+# Fill in the details relevant to your application, like naming and envs.
+# Places that **need** changes will be marked as `TODO`.
+# TODO: Duplicate the `.env.secret.template` file, with name `.env.secret`.
+# TODO: Create and download an Appstore Connect API key.
+# TODO: Fill in `APP_STORE_CONNECT_API_KEY` properties.
+# TODO: Fill in the TEAM id values, for team id and itc team id.
+# TODO: Set up the app identifiers and lanes needed for the app in question.
+
+platform :android do
+    desc "Build the aab for Development"
+    lane :buildDevAAB do
+        buildApp(flavor: "Development", build_type: "aab")
+    end
+
+    desc "Build the apk for Development"
+    lane :buildDevAPK do
+        buildApp(flavor: "Development", build_type: "apk")
+    end
+
+    desc "Build the aab for Staging"
+    lane :buildStagingAAB do
+        buildApp(flavor: "Staging", build_type: "aab")
+    end
+
+    desc "Build the apk for Staging"
+    lane :buildStagingAPK do
+        buildApp(flavor: "Staging", build_type: "apk")
+    end
+
+    desc "Build the aab for Production"
+    lane :buildProductionAAB do
+        buildApp(flavor: "Production", build_type: "aab")
+    end
+
+    desc "Build the apk for Production"
+    lane :buildProductionAPK do
+        buildApp(flavor: "Production", build_type: "apk")
+    end
+
+    private_lane :buildApp do |options|
+        jetifier
+
+        version_number = increment_version_code
+        gradle(task: "clean", project_dir: "android/")
+
+        gradle_task = options[:build_type] == "apk" ? "assemble" : "bundle"
+
+        gradle(
+            task: gradle_task,
+            build_type: "Release",
+            project_dir: "android/",
+            flavor: options[:flavor]
+        )
+
+        UI.message "Release built on: #{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}"
+    end
+
+    desc "Jetifier AndroidX transition"
+    private_lane :jetifier do
+        Dir.chdir("..") do
+            sh("npx jetify")
+        end
+    end
+end
+
+platform :ios do
+  desc "Set up signing for the application"
+  lane :signing do
+    setup_ci if is_ci
+    app_store_connect_api_key
+    register_own_devices
+
+    cert(development: true)
+    sigh(development: true, app_identifier: "com.qubikaapp.dev")
+    sigh(development: true, app_identifier: "com.qubikaapp.stg")
+    sigh(development: true, app_identifier: "com.qubikaapp.prd")
+    cert
+    sigh(app_identifier: "com.qubikaapp.dev")
+    sigh(app_identifier: "com.qubikaapp.stg")
+    sigh(app_identifier: "com.qubikaapp.prd")
+  end
+
+  desc "Build the application for Development"
+  lane :buildDev do
+      buildApp(scheme: "QubikaAppDevelopment")
+  end
+
+  desc "Build the application for Staging"
+  lane :buildStaging do
+      buildApp(scheme: "QubikaAppStaging")
+  end
+
+  desc "Build the application for Production"
+  lane :buildProduction do
+      buildApp(scheme: "QubikaApp")
+  end
+
+  desc "Build the application"
+  private_lane :buildApp do |options|
+    app_store_connect_api_key
+
+    signing
+
+    build_number = increment_build_number
+    build_ios_app(scheme: options[:scheme])
+    upload_to_testflight(skip_waiting_for_build_processing: true)
+  end
+
+  desc "Register iOS devices"
+  private_lane :register_own_devices do
+    register_devices(
+      devices: {
+        "December Labs iPhone 6" => "4d2493263deba0b7a215ea875caf4b33f660e2ee",
+        "December Labs Golden iPhone 8" => "a78e5a45a081b26440e65b3200367748ce5d3166",
+        "December Labs iPhone XR Black" => "00008020-000E71211A46002E"
+      }
+    )
+  end
+end
