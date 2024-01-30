@@ -1,14 +1,14 @@
 {
-	"name": "QubikaApp",
+	"name": "usage_rnchat",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
 		"android": "react-native run-android --mode developmentDebug",
 		"android:staging": "react-native run-android --mode stagingDebug",
 		"android:prod": "react-native run-android --mode productionDebug",
-		"ios": "react-native run-ios --scheme \"QubikaAppDevelopment\"",
-		"ios:staging": "react-native run-ios --scheme \"QubikaAppStaging\"",
-		"ios:prod": "react-native run-ios --scheme \"QubikaApp\"",
+		"ios": "react-native run-ios --scheme \"usage_rnchatDevelopment\"",
+		"ios:staging": "react-native run-ios --scheme \"usage_rnchatStaging\"",
+		"ios:prod": "react-native run-ios --scheme \"usage_rnchat\"",
 		"lint": "eslint .",
 		"start": "react-native start",
 		"test": "jest",

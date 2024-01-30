@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* QubikaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* QubikaAppTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-QubikaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-QubikaApp.a */; };
+		00E356F31AD99517003FC87E /* usageRNChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* usageRNChatTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-usageRNChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-usageRNChat.a */; };
 		0F1924FD0BD34224BB74EC33 /* BeVietnam-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86A827909B3D46BE8A0D80A1 /* BeVietnam-Bold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -22,7 +22,7 @@
 		3003E5A818074410AF7BBFB2 /* BeVietnam-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B7DB6D73862417E8C429E8D /* BeVietnam-ExtraBold.ttf */; };
 		583A13C8427E4B86967D0C98 /* BeVietnam-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E7B0D1E801D4B058D6CC905 /* BeVietnam-ThinItalic.ttf */; };
 		5F53C655AE3E4CB08475662C /* BeVietnam-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB040487999420F85CBB0C3 /* BeVietnam-Regular.ttf */; };
-		6199D8D34586BBAA7A087966 /* libPods-QubikaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-QubikaApp.a */; };
+		6199D8D34586BBAA7A087966 /* libPods-usageRNChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-usageRNChat.a */; };
 		6A9CD5D12AFA7029000B394E /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		6A9CD5D22AFA7029000B394E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6A9CD5D62AFA7029000B394E /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */; };
@@ -38,13 +38,13 @@
 		6AC8A3FC2AFBD344003EA018 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */; };
 		6AC8A3FD2AFBD344003EA018 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */; };
 		729829BEC67E47C0B04FDAB7 /* BeVietnam-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 118E4880166E4333A00161A4 /* BeVietnam-Italic.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-QubikaApp-QubikaAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-QubikaApp-QubikaAppTests.a */; };
+		7699B88040F8A987B510C191 /* libPods-usageRNChat-usageRNChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-usageRNChat-usageRNChatTests.a */; };
 		8386A0E168EB45D8BE6FCC8F /* BeVietnam-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC17ACBBAB324406B8D6AA5D /* BeVietnam-SemiBold.ttf */; };
 		8E9190672AC4D6F500BC14FF /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */; };
-		B26AF34156D639C78399BB1E /* libPods-QubikaApp-QubikaAppDevelopment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FFB1C75EE1695A0A486614 /* libPods-QubikaApp-QubikaAppDevelopment.a */; };
+		B26AF34156D639C78399BB1E /* libPods-usageRNChat-QubikaAppDevelopment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FFB1C75EE1695A0A486614 /* libPods-usageRNChat-QubikaAppDevelopment.a */; };
 		C5F57C3871BF48AC815E5C16 /* BeVietnam-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9E133FC234A476FAFC8264C /* BeVietnam-BoldItalic.ttf */; };
 		DBC8E258609042779D870321 /* BeVietnam-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC012912FB3941EA82E0471F /* BeVietnam-Thin.ttf */; };
-		FBF3F7034AA8E51BDD693F39 /* libPods-QubikaApp-QubikaAppStaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A91B4C11E444951E6EC33 /* libPods-QubikaApp-QubikaAppStaging.a */; };
+		FBF3F7034AA8E51BDD693F39 /* libPods-usageRNChat-QubikaAppStaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A91B4C11E444951E6EC33 /* libPods-usageRNChat-QubikaAppStaging.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,52 +53,52 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = QubikaApp;
+			remoteInfo = "usageRNChat";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* QubikaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QubikaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* usageRNChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "usageRNChatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* QubikaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QubikaAppTests.m; sourceTree = "<group>"; };
-		06BD3FEC72835A306B6CB6EC /* Pods-QubikaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp.debug.xcconfig"; path = "Target Support Files/Pods-QubikaApp/Pods-QubikaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* usageRNChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "usageRNChatTests.m"; sourceTree = "<group>"; };
+		06BD3FEC72835A306B6CB6EC /* Pods-usageRNChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usageRNChat.debug.xcconfig"; path = "Target Support Files/Pods-usageRNChat/Pods-usageRNChat.debug.xcconfig"; sourceTree = "<group>"; };
 		07C32642080D455B9F76C2DB /* BeVietnam-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-Medium.ttf"; path = "../src/assets/fonts/BeVietnam-Medium.ttf"; sourceTree = "<group>"; };
 		0AB040487999420F85CBB0C3 /* BeVietnam-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-Regular.ttf"; path = "../src/assets/fonts/BeVietnam-Regular.ttf"; sourceTree = "<group>"; };
 		0B7DB6D73862417E8C429E8D /* BeVietnam-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-ExtraBold.ttf"; path = "../src/assets/fonts/BeVietnam-ExtraBold.ttf"; sourceTree = "<group>"; };
 		118E4880166E4333A00161A4 /* BeVietnam-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-Italic.ttf"; path = "../src/assets/fonts/BeVietnam-Italic.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* QubikaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QubikaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = QubikaApp/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = QubikaApp/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = QubikaApp/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = QubikaApp/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = QubikaApp/main.m; sourceTree = "<group>"; };
-		1465B32CF01FA5D3F9736910 /* Pods-QubikaApp-QubikaAppDevelopment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaAppDevelopment.debug.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaAppDevelopment/Pods-QubikaApp-QubikaAppDevelopment.debug.xcconfig"; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-QubikaApp-QubikaAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QubikaApp-QubikaAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* usageRNChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "usageRNChat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "usageRNChat/AppDelegate.h"; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "usageRNChat/AppDelegate.mm"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "usageRNChat/Images.xcassets"; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "usageRNChat/Info.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "usageRNChat/main.m"; sourceTree = "<group>"; };
+		1465B32CF01FA5D3F9736910 /* Pods-usageRNChat-QubikaAppDevelopment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usageRNChat-QubikaAppDevelopment.debug.xcconfig"; path = "Target Support Files/Pods-usageRNChat-QubikaAppDevelopment/Pods-usageRNChat-QubikaAppDevelopment.debug.xcconfig"; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-usageRNChat-usageRNChatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-usageRNChat-usageRNChatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2F0BAF3CBF41EF8149BF30 /* BeVietnam-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-Light.ttf"; path = "../src/assets/fonts/BeVietnam-Light.ttf"; sourceTree = "<group>"; };
 		1E7B0D1E801D4B058D6CC905 /* BeVietnam-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-ThinItalic.ttf"; path = "../src/assets/fonts/BeVietnam-ThinItalic.ttf"; sourceTree = "<group>"; };
-		462A91B4C11E444951E6EC33 /* libPods-QubikaApp-QubikaAppStaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QubikaApp-QubikaAppStaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B52BBCEB8E8AAFB297E8D57 /* Pods-QubikaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp.release.xcconfig"; path = "Target Support Files/Pods-QubikaApp/Pods-QubikaApp.release.xcconfig"; sourceTree = "<group>"; };
-		54F440457D4EF3EC8D44A673 /* Pods-QubikaApp-QubikaAppStaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaAppStaging.debug.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaAppStaging/Pods-QubikaApp-QubikaAppStaging.debug.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-QubikaApp-QubikaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaAppTests.debug.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-QubikaApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QubikaApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		462A91B4C11E444951E6EC33 /* libPods-usageRNChat-QubikaAppStaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-usageRNChat-QubikaAppStaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B52BBCEB8E8AAFB297E8D57 /* Pods-usageRNChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usageRNChat.release.xcconfig"; path = "Target Support Files/Pods-usageRNChat/Pods-usageRNChat.release.xcconfig"; sourceTree = "<group>"; };
+		54F440457D4EF3EC8D44A673 /* Pods-usageRNChat-QubikaAppStaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usageRNChat-QubikaAppStaging.debug.xcconfig"; path = "Target Support Files/Pods-usageRNChat-QubikaAppStaging/Pods-usageRNChat-QubikaAppStaging.debug.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-usageRNChat-usageRNChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usageRNChat-usageRNChatTests.debug.xcconfig"; path = "Target Support Files/Pods-usageRNChat-usageRNChatTests/Pods-usageRNChat-usageRNChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-usageRNChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-usageRNChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9CD5DE2AFA7029000B394E /* QubikaAppStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QubikaAppStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9CD5F12AFA7033000B394E /* QubikaAppDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QubikaAppDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AC8A3F62AFBD330003EA018 /* Development-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Development-Info.plist"; path = "QubikaApp/Development-Info.plist"; sourceTree = "<group>"; };
-		6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Staging-Info.plist"; path = "QubikaApp/Staging-Info.plist"; sourceTree = "<group>"; };
+		6AC8A3F62AFBD330003EA018 /* Development-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Development-Info.plist"; path = "usageRNChat/Development-Info.plist"; sourceTree = "<group>"; };
+		6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Staging-Info.plist"; path = "usageRNChat/Staging-Info.plist"; sourceTree = "<group>"; };
 		804BF4BDC2724AC3B145965E /* BeVietnam-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-LightItalic.ttf"; path = "../src/assets/fonts/BeVietnam-LightItalic.ttf"; sourceTree = "<group>"; };
 		86A827909B3D46BE8A0D80A1 /* BeVietnam-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-Bold.ttf"; path = "../src/assets/fonts/BeVietnam-Bold.ttf"; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-QubikaApp-QubikaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaAppTests.release.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = QubikaApp/BootSplash.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-usageRNChat-usageRNChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usageRNChat-usageRNChatTests.release.xcconfig"; path = "Target Support Files/Pods-usageRNChat-usageRNChatTests/Pods-usageRNChat-usageRNChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = usageRNChat/BootSplash.storyboard; sourceTree = "<group>"; };
 		AC17ACBBAB324406B8D6AA5D /* BeVietnam-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-SemiBold.ttf"; path = "../src/assets/fonts/BeVietnam-SemiBold.ttf"; sourceTree = "<group>"; };
 		BC012912FB3941EA82E0471F /* BeVietnam-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-Thin.ttf"; path = "../src/assets/fonts/BeVietnam-Thin.ttf"; sourceTree = "<group>"; };
 		D4B5A4F2B2C14826AB9437A7 /* BeVietnam-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-SemiBoldItalic.ttf"; path = "../src/assets/fonts/BeVietnam-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		D72E3FC1B6D04BEFB58A6350 /* BeVietnam-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-MediumItalic.ttf"; path = "../src/assets/fonts/BeVietnam-MediumItalic.ttf"; sourceTree = "<group>"; };
-		DD250ECCD04133BBF4B07A56 /* Pods-QubikaApp-QubikaAppStaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaAppStaging.release.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaAppStaging/Pods-QubikaApp-QubikaAppStaging.release.xcconfig"; sourceTree = "<group>"; };
+		DD250ECCD04133BBF4B07A56 /* Pods-usageRNChat-QubikaAppStaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usageRNChat-QubikaAppStaging.release.xcconfig"; path = "Target Support Files/Pods-usageRNChat-QubikaAppStaging/Pods-usageRNChat-QubikaAppStaging.release.xcconfig"; sourceTree = "<group>"; };
 		E9E133FC234A476FAFC8264C /* BeVietnam-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-BoldItalic.ttf"; path = "../src/assets/fonts/BeVietnam-BoldItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F5C5512841974803B30D47E9 /* BeVietnam-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BeVietnam-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/BeVietnam-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		F6FFB1C75EE1695A0A486614 /* libPods-QubikaApp-QubikaAppDevelopment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QubikaApp-QubikaAppDevelopment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB0626A538FCD60B6813CEF8 /* Pods-QubikaApp-QubikaAppDevelopment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QubikaApp-QubikaAppDevelopment.release.xcconfig"; path = "Target Support Files/Pods-QubikaApp-QubikaAppDevelopment/Pods-QubikaApp-QubikaAppDevelopment.release.xcconfig"; sourceTree = "<group>"; };
+		F6FFB1C75EE1695A0A486614 /* libPods-usageRNChat-QubikaAppDevelopment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-usageRNChat-QubikaAppDevelopment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0626A538FCD60B6813CEF8 /* Pods-usageRNChat-QubikaAppDevelopment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usageRNChat-QubikaAppDevelopment.release.xcconfig"; path = "Target Support Files/Pods-usageRNChat-QubikaAppDevelopment/Pods-usageRNChat-QubikaAppDevelopment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-QubikaApp-QubikaAppTests.a in Frameworks */,
+				7699B88040F8A987B510C191 /* libPods-usageRNChat-usageRNChatTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,8 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-QubikaApp.a in Frameworks */,
-				6199D8D34586BBAA7A087966 /* libPods-QubikaApp.a in Frameworks */,
+				0C80B921A6F3F58F76C31292 /* libPods-usageRNChat.a in Frameworks */,
+				6199D8D34586BBAA7A087966 /* libPods-usageRNChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBF3F7034AA8E51BDD693F39 /* libPods-QubikaApp-QubikaAppStaging.a in Frameworks */,
+				FBF3F7034AA8E51BDD693F39 /* libPods-usageRNChat-QubikaAppStaging.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,20 +131,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B26AF34156D639C78399BB1E /* libPods-QubikaApp-QubikaAppDevelopment.a in Frameworks */,
+				B26AF34156D639C78399BB1E /* libPods-usageRNChat-QubikaAppDevelopment.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* QubikaAppTests */ = {
+		00E356EF1AD99517003FC87E /* usageRNChatTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* QubikaAppTests.m */,
+				00E356F21AD99517003FC87E /* usageRNChatTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = QubikaAppTests;
+			path = "usageRNChatTests";
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -155,7 +155,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* QubikaApp */ = {
+		13B07FAE1A68108700A75B9A /* usageRNChat */ = {
 			isa = PBXGroup;
 			children = (
 				6AC8A3FA2AFBD344003EA018 /* Staging-Info.plist */,
@@ -167,17 +167,17 @@
 				8E9190662AC4D6F500BC14FF /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = QubikaApp;
+			name = "usageRNChat";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-QubikaApp.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-QubikaApp-QubikaAppTests.a */,
-				F6FFB1C75EE1695A0A486614 /* libPods-QubikaApp-QubikaAppDevelopment.a */,
-				462A91B4C11E444951E6EC33 /* libPods-QubikaApp-QubikaAppStaging.a */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-usageRNChat.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-usageRNChat-usageRNChatTests.a */,
+				F6FFB1C75EE1695A0A486614 /* libPods-usageRNChat-QubikaAppDevelopment.a */,
+				462A91B4C11E444951E6EC33 /* libPods-usageRNChat-QubikaAppStaging.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,9 +192,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* QubikaApp */,
+				13B07FAE1A68108700A75B9A /* usageRNChat */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* QubikaAppTests */,
+				00E356EF1AD99517003FC87E /* usageRNChatTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -208,8 +208,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* QubikaApp.app */,
-				00E356EE1AD99517003FC87E /* QubikaAppTests.xctest */,
+				13B07F961A680F5B00A75B9A /* usageRNChat.app */,
+				00E356EE1AD99517003FC87E /* usageRNChatTests.xctest */,
 				6A9CD5DE2AFA7029000B394E /* QubikaAppStaging.app */,
 				6A9CD5F12AFA7033000B394E /* QubikaAppDevelopment.app */,
 			);
@@ -240,14 +240,14 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5B7EB9410499542E8C5724F5 /* Pods-QubikaApp-QubikaAppTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-QubikaApp-QubikaAppTests.release.xcconfig */,
-				06BD3FEC72835A306B6CB6EC /* Pods-QubikaApp.debug.xcconfig */,
-				4B52BBCEB8E8AAFB297E8D57 /* Pods-QubikaApp.release.xcconfig */,
-				1465B32CF01FA5D3F9736910 /* Pods-QubikaApp-QubikaAppDevelopment.debug.xcconfig */,
-				FB0626A538FCD60B6813CEF8 /* Pods-QubikaApp-QubikaAppDevelopment.release.xcconfig */,
-				54F440457D4EF3EC8D44A673 /* Pods-QubikaApp-QubikaAppStaging.debug.xcconfig */,
-				DD250ECCD04133BBF4B07A56 /* Pods-QubikaApp-QubikaAppStaging.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-usageRNChat-usageRNChatTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-usageRNChat-usageRNChatTests.release.xcconfig */,
+				06BD3FEC72835A306B6CB6EC /* Pods-usageRNChat.debug.xcconfig */,
+				4B52BBCEB8E8AAFB297E8D57 /* Pods-usageRNChat.release.xcconfig */,
+				1465B32CF01FA5D3F9736910 /* Pods-usageRNChat-QubikaAppDevelopment.debug.xcconfig */,
+				FB0626A538FCD60B6813CEF8 /* Pods-usageRNChat-QubikaAppDevelopment.release.xcconfig */,
+				54F440457D4EF3EC8D44A673 /* Pods-usageRNChat-QubikaAppStaging.debug.xcconfig */,
+				DD250ECCD04133BBF4B07A56 /* Pods-usageRNChat-QubikaAppStaging.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -255,9 +255,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* QubikaAppTests */ = {
+		00E356ED1AD99517003FC87E /* usageRNChatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QubikaAppTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "usageRNChatTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -271,14 +271,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = QubikaAppTests;
-			productName = QubikaAppTests;
-			productReference = 00E356EE1AD99517003FC87E /* QubikaAppTests.xctest */;
+			name = usageRNChatTests;
+			productName = usageRNChatTests;
+			productReference = 00E356EE1AD99517003FC87E /* usageRNChatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* QubikaApp */ = {
+		13B07F861A680F5B00A75B9A /* usageRNChat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "QubikaApp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "usageRNChat" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -293,9 +293,9 @@
 			);
 			dependencies = (
 			);
-			name = QubikaApp;
-			productName = QubikaApp;
-			productReference = 13B07F961A680F5B00A75B9A /* QubikaApp.app */;
+			name = "usageRNChat";
+			productName = "usageRNChat";
+			productReference = 13B07F961A680F5B00A75B9A /* usageRNChat.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6A9CD5CD2AFA7029000B394E /* QubikaAppStaging */ = {
@@ -316,7 +316,7 @@
 			dependencies = (
 			);
 			name = QubikaAppStaging;
-			productName = QubikaApp;
+			productName = "usageRNChat";
 			productReference = 6A9CD5DE2AFA7029000B394E /* QubikaAppStaging.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -338,7 +338,7 @@
 			dependencies = (
 			);
 			name = QubikaAppDevelopment;
-			productName = QubikaApp;
+			productName = "usageRNChat";
 			productReference = 6A9CD5F12AFA7033000B394E /* QubikaAppDevelopment.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -359,7 +359,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "QubikaApp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "usageRNChat" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -372,8 +372,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* QubikaApp */,
-				00E356ED1AD99517003FC87E /* QubikaAppTests */,
+				13B07F861A680F5B00A75B9A /* usageRNChat */,
+				00E356ED1AD99517003FC87E /* usageRNChatTests */,
 				6A9CD5CD2AFA7029000B394E /* QubikaAppStaging */,
 				6A9CD5E02AFA7033000B394E /* QubikaAppDevelopment */,
 			);
@@ -460,15 +460,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp/Pods-QubikaApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat/Pods-usageRNChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp/Pods-QubikaApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat/Pods-usageRNChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QubikaApp/Pods-QubikaApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-usageRNChat/Pods-usageRNChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		15AA753FEC94D3F3033DC363 /* [CP] Copy Pods Resources */ = {
@@ -477,15 +477,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppDevelopment/Pods-QubikaApp-QubikaAppDevelopment-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppDevelopment/Pods-usageRNChat-QubikaAppDevelopment-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppDevelopment/Pods-QubikaApp-QubikaAppDevelopment-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppDevelopment/Pods-usageRNChat-QubikaAppDevelopment-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppDevelopment/Pods-QubikaApp-QubikaAppDevelopment-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppDevelopment/Pods-usageRNChat-QubikaAppDevelopment-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		55DFCD15DF8B2980FA877423 /* [CP] Check Pods Manifest.lock */ = {
@@ -503,7 +503,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QubikaApp-QubikaAppStaging-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-usageRNChat-QubikaAppStaging-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -586,15 +586,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppStaging/Pods-QubikaApp-QubikaAppStaging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppStaging/Pods-usageRNChat-QubikaAppStaging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppStaging/Pods-QubikaApp-QubikaAppStaging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppStaging/Pods-usageRNChat-QubikaAppStaging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppStaging/Pods-QubikaApp-QubikaAppStaging-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppStaging/Pods-usageRNChat-QubikaAppStaging-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9CF1228A3E0B89CE1511CC86 /* [CP] Embed Pods Frameworks */ = {
@@ -603,15 +603,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppDevelopment/Pods-QubikaApp-QubikaAppDevelopment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppDevelopment/Pods-usageRNChat-QubikaAppDevelopment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppDevelopment/Pods-QubikaApp-QubikaAppDevelopment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppDevelopment/Pods-usageRNChat-QubikaAppDevelopment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppDevelopment/Pods-QubikaApp-QubikaAppDevelopment-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppDevelopment/Pods-usageRNChat-QubikaAppDevelopment-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9F520F7100AFDE4A7B617094 /* [CP] Check Pods Manifest.lock */ = {
@@ -629,7 +629,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QubikaApp-QubikaAppDevelopment-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-usageRNChat-QubikaAppDevelopment-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -651,7 +651,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QubikaApp-QubikaAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-usageRNChat-usageRNChatTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -664,15 +664,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppStaging/Pods-QubikaApp-QubikaAppStaging-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppStaging/Pods-usageRNChat-QubikaAppStaging-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppStaging/Pods-QubikaApp-QubikaAppStaging-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppStaging/Pods-usageRNChat-QubikaAppStaging-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppStaging/Pods-QubikaApp-QubikaAppStaging-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-QubikaAppStaging/Pods-usageRNChat-QubikaAppStaging-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
@@ -690,7 +690,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QubikaApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-usageRNChat-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -703,15 +703,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-usageRNChatTests/Pods-usageRNChat-usageRNChatTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-usageRNChatTests/Pods-usageRNChat-usageRNChatTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-usageRNChatTests/Pods-usageRNChat-usageRNChatTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -720,15 +720,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp/Pods-QubikaApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat/Pods-usageRNChat-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp/Pods-QubikaApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat/Pods-usageRNChat-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QubikaApp/Pods-QubikaApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-usageRNChat/Pods-usageRNChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -737,15 +737,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-usageRNChatTests/Pods-usageRNChat-usageRNChatTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-usageRNChatTests/Pods-usageRNChat-usageRNChatTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QubikaApp-QubikaAppTests/Pods-QubikaApp-QubikaAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-usageRNChat-usageRNChatTests/Pods-usageRNChat-usageRNChatTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -774,7 +774,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* QubikaAppTests.m in Sources */,
+				00E356F31AD99517003FC87E /* usageRNChatTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,7 +810,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* QubikaApp */;
+			target = 13B07F861A680F5B00A75B9A /* usageRNChat */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -818,14 +818,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-QubikaApp-QubikaAppTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-usageRNChat-usageRNChatTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = QubikaAppTests/Info.plist;
+				INFOPLIST_FILE = "usageRNChatTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -839,17 +839,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QubikaApp.app/QubikaApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/usageRNChat.app/usageRNChat";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-QubikaApp-QubikaAppTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-usageRNChat-usageRNChatTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = QubikaAppTests/Info.plist;
+				INFOPLIST_FILE = "usageRNChatTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -863,20 +863,21 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QubikaApp.app/QubikaApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/usageRNChat.app/usageRNChat";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06BD3FEC72835A306B6CB6EC /* Pods-QubikaApp.debug.xcconfig */;
+			baseConfigurationReference = 06BD3FEC72835A306B6CB6EC /* Pods-usageRNChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = QubikaApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = QubikaApp;
+				INFOPLIST_FILE = "usageRNChat/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "usage_RNChat";
+				INFOPLIST_KEY_CFBundleDisplayName = usageRNChat;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -888,7 +889,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qubikaapp.prd;
-				PRODUCT_NAME = QubikaApp;
+				PRODUCT_NAME = "usageRNChat";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -897,13 +898,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B52BBCEB8E8AAFB297E8D57 /* Pods-QubikaApp.release.xcconfig */;
+			baseConfigurationReference = 4B52BBCEB8E8AAFB297E8D57 /* Pods-usageRNChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = QubikaApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = QubikaApp;
+				INFOPLIST_FILE = "usageRNChat/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "usage_RNChat";
+				INFOPLIST_KEY_CFBundleDisplayName = usageRNChat;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -915,7 +917,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qubikaapp.prd;
-				PRODUCT_NAME = QubikaApp;
+				PRODUCT_NAME = "usageRNChat";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -923,13 +925,13 @@
 		};
 		6A9CD5DC2AFA7029000B394E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54F440457D4EF3EC8D44A673 /* Pods-QubikaApp-QubikaAppStaging.debug.xcconfig */;
+			baseConfigurationReference = 54F440457D4EF3EC8D44A673 /* Pods-usageRNChat-QubikaAppStaging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "QubikaApp/Staging-Info.plist";
+				INFOPLIST_FILE = "usageRNChat/Staging-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = QubikaAppStaging;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -951,12 +953,12 @@
 		};
 		6A9CD5DD2AFA7029000B394E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD250ECCD04133BBF4B07A56 /* Pods-QubikaApp-QubikaAppStaging.release.xcconfig */;
+			baseConfigurationReference = DD250ECCD04133BBF4B07A56 /* Pods-usageRNChat-QubikaAppStaging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "QubikaApp/Staging-Info.plist";
+				INFOPLIST_FILE = "usageRNChat/Staging-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = QubikaAppStaging;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -977,13 +979,13 @@
 		};
 		6A9CD5EF2AFA7033000B394E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1465B32CF01FA5D3F9736910 /* Pods-QubikaApp-QubikaAppDevelopment.debug.xcconfig */;
+			baseConfigurationReference = 1465B32CF01FA5D3F9736910 /* Pods-usageRNChat-QubikaAppDevelopment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "QubikaApp/Development-Info.plist";
+				INFOPLIST_FILE = "usageRNChat/Development-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = QubikaAppDevelopment;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1005,12 +1007,12 @@
 		};
 		6A9CD5F02AFA7033000B394E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB0626A538FCD60B6813CEF8 /* Pods-QubikaApp-QubikaAppDevelopment.release.xcconfig */;
+			baseConfigurationReference = FB0626A538FCD60B6813CEF8 /* Pods-usageRNChat-QubikaAppDevelopment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "QubikaApp/Development-Info.plist";
+				INFOPLIST_FILE = "usageRNChat/Development-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = QubikaAppDevelopment;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1171,7 +1173,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QubikaAppTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "usageRNChatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1180,7 +1182,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "QubikaApp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "usageRNChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1207,7 +1209,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "QubikaApp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "usageRNChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

@@ -18,7 +18,7 @@
                      BlueprintIdentifier = "6A9CD5CD2AFA7029000B394E"
                      BuildableName = "QubikaAppStaging.app"
                      BlueprintName = "QubikaAppStaging"
-                     ReferencedContainer = "container:QubikaApp.xcodeproj">
+                     ReferencedContainer = "container:usageRNChat.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "QubikaApp.app"
-               BlueprintName = "QubikaApp"
-               ReferencedContainer = "container:QubikaApp.xcodeproj">
+               BuildableName = "usageRNChat.app"
+               BlueprintName = "usageRNChat"
+               ReferencedContainer = "container:usageRNChat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -52,9 +52,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "QubikaAppTests.xctest"
-               BlueprintName = "QubikaAppTests"
-               ReferencedContainer = "container:QubikaApp.xcodeproj">
+               BuildableName = "usageRNChatTests.xctest"
+               BlueprintName = "usageRNChatTests"
+               ReferencedContainer = "container:usageRNChat.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -85,7 +85,7 @@
             BlueprintIdentifier = "6A9CD5CD2AFA7029000B394E"
             BuildableName = "QubikaAppStaging.app"
             BlueprintName = "QubikaAppStaging"
-            ReferencedContainer = "container:QubikaApp.xcodeproj">
+            ReferencedContainer = "container:usageRNChat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -101,7 +101,7 @@
             BlueprintIdentifier = "6A9CD5CD2AFA7029000B394E"
             BuildableName = "QubikaAppStaging.app"
             BlueprintName = "QubikaAppStaging"
-            ReferencedContainer = "container:QubikaApp.xcodeproj">
+            ReferencedContainer = "container:usageRNChat.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
