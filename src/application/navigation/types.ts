@@ -1,36 +1,29 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { ChatThread } from 'react-native-chat-sdk/methods/chatHooks/getThreadData';
 
-export type AppStackParamList = {
-	Home: undefined;
-	Settings: undefined;
-	Products: undefined;
-	ProductDetails: { id: number };
-};
-
-export type AuthStackParamList = {
+export type RootStackParamList = {
 	Login: undefined;
+	ChatsList: undefined;
+	Chat: ChatThread;
 };
 
-type AppStackNavigatorScreenProps<T extends keyof AppStackParamList> =
-	NativeStackScreenProps<AppStackParamList, T>;
+export type HomeScreenProps = NativeStackScreenProps<
+	RootStackParamList,
+	'Login'
+>;
 
-type AuthNavigatorScreenProps<T extends keyof AuthStackParamList> =
-	NativeStackScreenProps<AuthStackParamList, T>;
+export type ChatsListScreenProps = NativeStackScreenProps<
+	RootStackParamList,
+	'ChatsList'
+>;
 
-export type HomeScreenProps = AppStackNavigatorScreenProps<'Home'>;
-export type LoginScreenProps = AuthNavigatorScreenProps<'Login'>;
-export type SettingsScreenProps = AppStackNavigatorScreenProps<'Settings'>;
-export type ProductsScreenProps = AppStackNavigatorScreenProps<'Products'>;
-export type ProductDetailsScreenProps =
-	AppStackNavigatorScreenProps<'ProductDetails'>;
-
-export type ProductsScreenNavigationProp = ProductsScreenProps['navigation'];
-
-type AppParamList = AppStackParamList & AuthStackParamList;
-
+export type ChatScreenProps = NativeStackScreenProps<
+	RootStackParamList,
+	'Chat'
+>;
 declare global {
 	// eslint-disable-next-line @typescript-eslint/no-namespace
 	namespace ReactNavigation {
-		interface RootParamList extends AppParamList {}
+		interface RootParamList extends RootStackParamList {}
 	}
 }

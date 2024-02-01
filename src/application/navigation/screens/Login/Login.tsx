@@ -1,72 +1,52 @@
-import { useTheme } from '@react-navigation/native';
+import { useSessionContext } from '../../../../features/session/SessionContext';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { Button } from '../../../../ui/Button/index';
+import { InputAndTitle } from '../../../../ui/InputAndTitle';
 
-import { LoginScreenProps } from 'application/navigation/types';
-import { spacing } from 'application/theme';
-import { useSessionContext } from 'features/session/SessionContext';
-import { strings } from 'services/localization';
-import { Button, TextInput } from 'ui';
-import { Body, H1 } from 'ui/text';
+const Login = () => {
+	const [inputUserId, setInputUserId] = useState('');
 
-const Login: React.FC<LoginScreenProps> = () => {
-	const { isPendingLogIn, logIn, logInError: error } = useSessionContext();
-	const [username, setUsername] = useState<string>('');
-	const [password, setPassword] = useState<string>('');
-	const { colors } = useTheme();
-
-	const handleLogin = () => logIn(username, password);
+	const { logIn } = useSessionContext();
 
 	return (
 		<View style={styles.container}>
-			<View style={styles.content}>
-				<H1 style={styles.title}>{strings.login.header}</H1>
-				<TextInput
-					placeholder={strings.login.username}
-					onChangeText={setUsername}
-					style={styles.input}
-					autoCapitalize="none"
+			<View style={styles.inputsContainer}>
+				<InputAndTitle
+					title="UserId"
+					currentValue={inputUserId}
+					onChange={setInputUserId}
 				/>
-				<TextInput
-					placeholder={strings.login.password}
-					onChangeText={setPassword}
-					style={styles.input}
-					secureTextEntry
+
+				<View style={styles.separator} />
+				<Button
+					title="Login"
+					onPress={() => logIn(inputUserId)}
+					extraStyle={styles.button}
 				/>
-				{!!error && (
-					<Body style={[styles.error, { color: colors.error }]}>
-						{strings.login.error}
-					</Body>
-				)}
 			</View>
-			<Button
-				title={strings.login.button}
-				onPress={handleLogin}
-				disabled={isPendingLogIn}
-			/>
 		</View>
 	);
 };
 
+export default Login;
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		padding: spacing.xl,
-	},
-	content: {
-		alignItems: 'stretch',
-		flex: 1,
 		justifyContent: 'center',
+		alignItems: 'center',
 	},
-	error: {
-		marginTop: spacing.s,
+	inputsContainer: {
+		width: '100%',
+		paddingHorizontal: 30,
 	},
-	input: {
-		marginTop: spacing.m,
+	button: {
+		paddingHorizontal: 16,
+		paddingVertical: 8,
+		backgroundColor: 'gray',
 	},
-	title: {
-		marginBottom: spacing.xl,
+	separator: {
+		height: 24,
 	},
 });
-
-export default Login;

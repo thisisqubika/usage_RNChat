@@ -1,5 +1,5 @@
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { useColorScheme } from 'react-native';
 import BootSplash from 'react-native-bootsplash';
 
@@ -9,13 +9,13 @@ import { AppStack } from './AppStack';
 import { AuthStack } from './AuthStack';
 
 export const Navigator: React.FC = () => {
-	const { isAuthenticated } = useSessionContext();
+	const { userId } = useSessionContext();
 	const scheme = useColorScheme();
 	const theme: Theme = scheme === 'dark' ? DarkTheme : DefaultTheme;
 
 	return (
 		<NavigationContainer theme={theme} onReady={() => BootSplash.hide()}>
-			{isAuthenticated ? <AppStack /> : <AuthStack />}
+			{userId ? <AppStack /> : <AuthStack />}
 		</NavigationContainer>
 	);
 };
