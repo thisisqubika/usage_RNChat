@@ -6,7 +6,7 @@ import {
 	ImageLibraryOptions,
 } from 'react-native-image-picker';
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
-import { fstorage } from 'react-native-chat-sdk/methods/firebase';
+import { fstorage } from '../../../../services/firebase/config';
 import uuid from 'react-native-uuid';
 
 // Managing an ascii blank character to place on the input once the user selects an image, because giftedchat doesn't call the onSend function unless there is something on the input. Before sending the message we must remove that emtpy ascii.
